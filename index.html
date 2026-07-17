@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>7.17 复盘</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:#0c0c18;
+  display:flex;justify-content:center;
+}
+.page{width:100%;max-width:414px;padding:12px 10px 16px;display:flex;flex-direction:column;gap:8px}
+
+/* ── 第一屏：头像行 ── */
+.top-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4px;
+}
+.top-row .brand{font-size:11px;color:#556;letter-spacing:2px}
+.top-row .date-tag{
+  font-size:11px;color:#889;background:rgba(255,255,255,.06);
+  padding:2px 10px;border-radius:10px;
+}
+
+/* ── Hero ── */
+.hero{
+  background:linear-gradient(160deg,#14143a 0%,#0d162e 100%);
+  border-radius:14px;padding:18px 14px 14px;
+  border:1px solid rgba(80,120,255,.12);text-align:center;
+}
+.hero .env{
+  font-size:42px;font-weight:900;letter-spacing:4px;
+  background:linear-gradient(180deg,#6b9fff,#3b6cf4);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
+.hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
+
+/* ── 指数三连 ── */
+.idx-row{display:flex;gap:6px}
+.idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
+.idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
+.idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
+.idx .c{font-size:12px;font-weight:700;color:#22c55e}
+
+/* ── 核心数据 2x3 ── */
+.grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+.cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
+.cell .bv{font-size:20px;font-weight:900;color:#e0e6f0}
+.cell .bl{font-size:10px;color:#6677aa;margin-top:1px}
+.cell .be{font-size:10px;font-weight:700;margin-top:1px}
+.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
+
+/* ── 两融窄条 ── */
+.margin-strip{
+  display:flex;gap:6px;
+}
+.mg{
+  flex:1;background:rgba(255,255,255,.03);border-radius:10px;
+  padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04);
+}
+.mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
+.mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
+
+/* ── Section ── */
+.sec{
+  background:rgba(255,255,255,.025);border-radius:12px;
+  padding:12px;border:1px solid rgba(255,255,255,.05);
+}
+.sec .sh{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.sec .sh .si{font-size:16px}
+.sec .sh .st{font-size:14px;font-weight:800;color:#e0e6f0}
+.sec .sb{font-size:12.5px;color:#b0bed8;line-height:1.75}
+.sec-red{border-color:rgba(239,68,68,.15);background:rgba(239,68,68,.04)}
+.sec-red .st{color:#f87171}
+.sec-yel{border-color:rgba(249,115,22,.12)}
+.sec-yel .st{color:#fb923c}
+.sec-blu{border-color:rgba(59,130,246,.12)}
+
+/* ── Stock pills ── */
+.pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
+.pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
+
+/* ── Observation ── */
+.obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
+.obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
+
+/* ── Footer ── */
+.ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
+
+/* ── Screen break indicator (visual only, doesn't print) ── */
+.screen-break{
+  margin:0;height:0;border:none;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══ 第一屏 ═══ -->
+  <div class="top-row">
+    <span class="brand">A 股 复 盘</span>
+    <span class="date-tag">2026.07.17 周五</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="env">冰 点</div>
+    <div class="desc">涨跌比 0.10 · 涨 482 跌 5001</div>
+  </div>
+
+  <!-- 三大指数 -->
+  <div class="idx-row">
+    <div class="idx"><div class="n">上证</div><div class="v">3764</div><div class="c">-3.05%</div></div>
+    <div class="idx"><div class="n">深证</div><div class="v">13707</div><div class="c">-5.40%</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">3429</div><div class="c">-7.15%</div></div>
+  </div>
+
+  <!-- 核心数据 6 格 -->
+  <div class="grid6">
+    <div class="cell"><div class="bv c-y">0.10</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv">35</div><div class="bl">涨停</div><div class="be c-r">跌停 212</div></div>
+    <div class="cell"><div class="bv">2.67</div><div class="bl">万亿</div><div class="be c-r">放量 10.4%</div></div>
+    <div class="cell"><div class="bv">23%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">17%</div><div class="bl">晋级率</div><div class="be">低位</div></div>
+    <div class="cell"><div class="bv c-r">826亿</div><div class="bl">北向流出</div></div>
+  </div>
+
+  <!-- 两融 -->
+  <div class="margin-strip">
+    <div class="mg"><div class="mv">2.84 万亿</div><div class="ml">融资余额 · 净偿还 ↓</div></div>
+    <div class="mg"><div class="mv">272.7%</div><div class="ml">担保比例 · 下行</div></div>
+    <div class="mg"><div class="mv">-1400 亿</div><div class="ml">6月末至今降幅</div></div>
+  </div>
+
+  <!-- 跌停结构 -->
+  <div class="sec">
+    <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
+    <div class="sb">半导体 · 消费电子 · 通信 为跌停主力<br>与前期科技主线<span style="color:#ef4444;font-weight:700">高度重叠</span> → 主线崩塌，非高低切换</div>
+  </div>
+
+  <!-- ═══ 第二屏 ═══ -->
+  <div class="screen-break"></div>
+
+  <!-- 主线 -->
+  <div class="sec sec-red">
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 电力防御</span></div>
+    <div class="sb">
+      9 家涨停逆市崛起<br>
+      催化：<span style="color:#fca5a5">用电负荷再创新高 15.51 亿千瓦</span><br>
+      ＋ 十五五碳达峰方案 ＋ AI 算力拉需求<br>
+      <span style="color:#fca5a5;font-weight:700">定性：冰点防御主线，非进攻主线</span>
+    </div>
+    <div class="pills">
+      <span class="pill r">华银电力</span><span class="pill r">桂冠电力</span>
+      <span class="pill r">立新能源·2板</span><span class="pill r">深南电A</span>
+      <span class="pill r">乐山电力</span><span class="pill">赣能股份</span>
+      <span class="pill">杭州热电</span><span class="pill">宁波能源</span>
+      <span class="pill">湖南发展</span>
+    </div>
+  </div>
+
+  <!-- 次线 -->
+  <div class="sec sec-yel">
+    <div class="sh"><span class="si">🟡</span><span class="st">次线 & 散点</span></div>
+    <div class="sb">
+      <span style="color:#fb923c;font-weight:700">艾艾精工</span> 7天6板（控股权转让）<br>
+      九安医疗 4天3板 · 智度股份 3连板 · 信通电子 5天4板<br>
+      珍宝岛/道明光学 2连板 · 其余散点无板块共振
+    </div>
+  </div>
+
+  <!-- 核心矛盾 -->
+  <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
+    <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
+    <div class="sb">
+      融资<span style="color:#f59e0b;font-weight:700">10 连降 -1400 亿</span>，加速去杠杆<br>
+      科技全线崩塌，防御独活<br>
+      <span style="color:#fca5a5;font-weight:700">电力能否撑过周末成为修复先手？<br>还是周一无主线冰点二连？</span>
+    </div>
+  </div>
+
+  <!-- 周一观察 -->
+  <div class="sec sec-blu">
+    <div class="sh"><span class="si">📌</span><span class="st">周一观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">华银电力能否高开守住 <span style="color:#fca5a5;font-weight:700">5.96</span>？低开即防御逻辑证伪</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">跌停能否从 212 缩至 <span style="color:#60a5fa;font-weight:700">&lt;80</span>？继续 &gt;100 则冰点确认</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">半导体/CPO 是否缩量止跌？不放量跌停即企稳</div></div>
+  </div>
+
+  <div class="ft">记录用 · 不构成投资建议</div>
+
+</div>
+</body>
+</html>
