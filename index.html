@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>7.17 复盘</title>
+<title>7.20 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -13,7 +13,6 @@ body{
 }
 .page{width:100%;max-width:414px;padding:12px 10px 16px;display:flex;flex-direction:column;gap:8px}
 
-/* ── 第一屏：头像行 ── */
 .top-row{
   display:flex;align-items:center;justify-content:space-between;
   padding:0 4px;
@@ -24,7 +23,6 @@ body{
   padding:2px 10px;border-radius:10px;
 }
 
-/* ── Hero ── */
 .hero{
   background:linear-gradient(160deg,#14143a 0%,#0d162e 100%);
   border-radius:14px;padding:18px 14px 14px;
@@ -38,14 +36,12 @@ body{
 .hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
 .hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
 
-/* ── 指数三连 ── */
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
 .idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
 .idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
-.idx .c{font-size:12px;font-weight:700;color:#22c55e}
+.idx .c{font-size:12px;font-weight:700}
 
-/* ── 核心数据 2x3 ── */
 .grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
 .cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
 .cell .bv{font-size:20px;font-weight:900;color:#e0e6f0}
@@ -53,7 +49,6 @@ body{
 .cell .be{font-size:10px;font-weight:700;margin-top:1px}
 .c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
 
-/* ── 两融窄条 ── */
 .margin-strip{
   display:flex;gap:6px;
 }
@@ -64,7 +59,6 @@ body{
 .mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
 .mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
 
-/* ── Section ── */
 .sec{
   background:rgba(255,255,255,.025);border-radius:12px;
   padding:12px;border:1px solid rgba(255,255,255,.05);
@@ -79,23 +73,22 @@ body{
 .sec-yel .st{color:#fb923c}
 .sec-blu{border-color:rgba(59,130,246,.12)}
 
-/* ── Stock pills ── */
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
+.pill.g{background:rgba(34,197,94,.12);color:#4ade80}
+.pill.b{background:rgba(59,130,246,.12);color:#60a5fa}
 
-/* ── Observation ── */
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
 
-/* ── Footer ── */
-.ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
+.emo-bar{display:flex;gap:2px;margin-top:6px;align-items:flex-end;height:36px}
+.emo-bar .eb{flex:1;border-radius:2px 2px 0 0;min-width:3px}
 
-/* ── Screen break indicator (visual only, doesn't print) ── */
-.screen-break{
-  margin:0;height:0;border:none;
-}
+.ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px;margin-top:4px}
+
+.screen-break{margin:0;height:0;border:none}
 </style>
 </head>
 <body>
@@ -104,95 +97,107 @@ body{
   <!-- ═══ 第一屏 ═══ -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.07.17 周五</span>
+    <span class="date-tag">2026.07.20 周一</span>
   </div>
 
-  <!-- Hero -->
   <div class="hero">
     <div class="env">冰 点</div>
-    <div class="desc">涨跌比 0.10 · 涨 482 跌 5001</div>
+    <div class="desc">涨跌比 0.47 · 涨 1740 跌 3710</div>
+    <div class="ratio">连续2日冰点 · 分化极致</div>
   </div>
 
-  <!-- 三大指数 -->
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">3764</div><div class="c">-3.05%</div></div>
-    <div class="idx"><div class="n">深证</div><div class="v">13707</div><div class="c">-5.40%</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">3429</div><div class="c">-7.15%</div></div>
+    <div class="idx"><div class="n">上证</div><div class="v">3796</div><div class="c c-g">+0.85%</div></div>
+    <div class="idx"><div class="n">深证</div><div class="v">13610</div><div class="c c-r">-0.71%</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">3443</div><div class="c c-g">+0.42%</div></div>
   </div>
 
-  <!-- 核心数据 6 格 -->
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">0.10</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv">35</div><div class="bl">涨停</div><div class="be c-r">跌停 212</div></div>
-    <div class="cell"><div class="bv">2.67</div><div class="bl">万亿</div><div class="be c-r">放量 10.4%</div></div>
-    <div class="cell"><div class="bv">23%</div><div class="bl">炸板率</div></div>
-    <div class="cell"><div class="bv">17%</div><div class="bl">晋级率</div><div class="be">低位</div></div>
-    <div class="cell"><div class="bv c-r">826亿</div><div class="bl">北向流出</div></div>
+    <div class="cell"><div class="bv c-y">0.47</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv">55</div><div class="bl">涨停</div><div class="be c-r">跌停 267</div></div>
+    <div class="cell"><div class="bv">2.72</div><div class="bl">万亿</div><div class="be c-r">放量 1.7%</div></div>
+    <div class="cell"><div class="bv">42%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">20%</div><div class="bl">晋级率</div><div class="be">连板仅7只</div></div>
+    <div class="cell"><div class="bv c-g">30家</div><div class="bl">能源链涨停</div></div>
   </div>
 
-  <!-- 两融 -->
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.84 万亿</div><div class="ml">融资余额 · 净偿还 ↓</div></div>
-    <div class="mg"><div class="mv">272.7%</div><div class="ml">担保比例 · 下行</div></div>
-    <div class="mg"><div class="mv">-1400 亿</div><div class="ml">6月末至今降幅</div></div>
+    <div class="mg"><div class="mv">2.76 万亿</div><div class="ml">融资余额 · 单日-800亿</div></div>
+    <div class="mg"><div class="mv">261.6%</div><div class="ml">担保比例 · 逼警戒线</div></div>
+    <div class="mg"><div class="mv">-2400 亿</div><div class="ml">6月末至今降幅</div></div>
   </div>
 
-  <!-- 跌停结构 -->
   <div class="sec">
     <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">半导体 · 消费电子 · 通信 为跌停主力<br>与前期科技主线<span style="color:#ef4444;font-weight:700">高度重叠</span> → 主线崩塌，非高低切换</div>
+    <div class="sb">半导体 · PCB/CCL · CPO · 消费电子 为跌停主力<br>与能源主线<span style="color:#22c55e;font-weight:700">完全不重叠</span> → 极致高低切，非主线崩塌</div>
   </div>
 
   <!-- ═══ 第二屏 ═══ -->
   <div class="screen-break"></div>
 
-  <!-- 主线 -->
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 电力防御</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 能源链 30家涨停</span></div>
     <div class="sb">
-      9 家涨停逆市崛起<br>
-      催化：<span style="color:#fca5a5">用电负荷再创新高 15.51 亿千瓦</span><br>
-      ＋ 十五五碳达峰方案 ＋ AI 算力拉需求<br>
-      <span style="color:#fca5a5;font-weight:700">定性：冰点防御主线，非进攻主线</span>
+      电力 17 家 + 煤炭 6 家 + 油气 5 家 + 风电/电网各1<br>
+      催化：<span style="color:#fca5a5">用电负荷 15.51 亿千瓦再新高</span><br>
+      ＋ H1 业绩暴增(桂冠+47%/立新×7) ＋ 美伊冲突霍尔木兹断航<br>
+      ＋ 原煤产量-9.7%创十年最大降幅 ＋ 央企增持维稳<br>
+      <span style="color:#fca5a5;font-weight:700">定性：延续，中期主线确认（8个独立催化共振）</span>
     </div>
     <div class="pills">
-      <span class="pill r">华银电力</span><span class="pill r">桂冠电力</span>
-      <span class="pill r">立新能源·2板</span><span class="pill r">深南电A</span>
-      <span class="pill r">乐山电力</span><span class="pill">赣能股份</span>
-      <span class="pill">杭州热电</span><span class="pill">宁波能源</span>
-      <span class="pill">湖南发展</span>
+      <span class="pill r">华银电力·2板</span><span class="pill r">桂冠电力·2板</span>
+      <span class="pill r">立新能源·3板</span><span class="pill r">乐山电力·2板</span>
+      <span class="pill r">深南电A·2板</span><span class="pill r">湖南发展·4天3</span>
+      <span class="pill g">兖矿能源</span><span class="pill g">大有能源·5天3</span>
+      <span class="pill g">中煤能源</span><span class="pill b">中国海油</span>
+      <span class="pill b">博迈科</span><span class="pill">大唐发电</span>
+      <span class="pill">涪陵电力</span><span class="pill">京能电力</span>
     </div>
   </div>
 
-  <!-- 次线 -->
   <div class="sec sec-yel">
-    <div class="sh"><span class="si">🟡</span><span class="st">次线 & 散点</span></div>
+    <div class="sh"><span class="si">🟡</span><span class="st">次线</span></div>
     <div class="sb">
-      <span style="color:#fb923c;font-weight:700">艾艾精工</span> 7天6板（控股权转让）<br>
-      九安医疗 4天3板 · 智度股份 3连板 · 信通电子 5天4板<br>
-      珍宝岛/道明光学 2连板 · 其余散点无板块共振
+      <span style="color:#fb923c;font-weight:700">化学涨价 5家</span>（染料调价+300%）<br>
+      金牛化工·2板 · 江苏索普·5天3 · 善水科技·20cm · 闰土股份 · 百合花<br>
+      <span style="color:#4ade80;font-weight:700">IT/Kimi 3家</span>（Kimi暂停C端订阅）<br>
+      美利云 · 浪潮软件 · 浙大网新
     </div>
   </div>
 
-  <!-- 核心矛盾 -->
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      融资<span style="color:#f59e0b;font-weight:700">10 连降 -1400 亿</span>，加速去杠杆<br>
-      科技全线崩塌，防御独活<br>
-      <span style="color:#fca5a5;font-weight:700">电力能否撑过周末成为修复先手？<br>还是周一无主线冰点二连？</span>
+      能源链<span style="color:#f59e0b;font-weight:700">30家涨停</span>全面爆发 vs 科技<span style="color:#ef4444;font-weight:700">267家跌停</span>加速出清<br>
+      极致的高低切格局<br>
+      <span style="color:#fca5a5;font-weight:700">能源能否从"冰点防御"晋级为"修复进攻"主线？<br>还是一日游后重回无主线冰点？</span>
     </div>
   </div>
 
-  <!-- 周一观察 -->
   <div class="sec sec-blu">
-    <div class="sh"><span class="si">📌</span><span class="st">周一观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">华银电力能否高开守住 <span style="color:#fca5a5;font-weight:700">5.96</span>？低开即防御逻辑证伪</div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">跌停能否从 212 缩至 <span style="color:#60a5fa;font-weight:700">&lt;80</span>？继续 &gt;100 则冰点确认</div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">半导体/CPO 是否缩量止跌？不放量跌停即企稳</div></div>
+    <div class="sh"><span class="si">📌</span><span class="st">周二观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">华银/桂冠/立新 是否 <span style="color:#4ade80;font-weight:700">≥1家晋级3板</span>？无一晋级则主线断板</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">跌停能否从 267 缩至 <span style="color:#60a5fa;font-weight:700">&lt;80</span>？继续>150则冰点未解除</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">能源链涨停能否 <span style="color:#4ade80;font-weight:700">≥8家</span>？跌破则一日游证伪</div></div>
   </div>
 
-  <div class="ft">记录用 · 不构成投资建议</div>
+  <!-- 情绪序列mini图 -->
+  <div class="sec" style="padding:8px 12px">
+    <div class="sh"><span class="si">📊</span><span class="st" style="font-size:12px">情绪序列 · 近20日涨跌比走势</span></div>
+    <div class="emo-bar">
+      <div class="eb" style="height:90%;background:#22c55e" title="07-08 0.42"></div>
+      <div class="eb" style="height:74%;background:#4ade80" title="07-09 0.86"></div>
+      <div class="eb" style="height:95%;background:#22c55e" title="07-10 2.25"></div>
+      <div class="eb" style="height:17%;background:#ef4444" title="07-13 0.17"></div>
+      <div class="eb" style="height:100%;background:#22c55e" title="07-14 3.38"></div>
+      <div class="eb" style="height:58%;background:#4ade80" title="07-15 1.60"></div>
+      <div class="eb" style="height:31%;background:#f59e0b" title="07-16 0.87"></div>
+      <div class="eb" style="height:10%;background:#ef4444" title="07-17 0.10"></div>
+      <div class="eb" style="height:22%;background:#ef4444" title="07-20 0.47"></div>
+    </div>
+  </div>
+
+  <div class="ft">记录用 · 不构成投资建议 · loho</div>
 
 </div>
 </body>
