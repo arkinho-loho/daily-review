@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>7.22 复盘</title>
+<title>7.23 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -24,19 +24,23 @@ body{
 }
 
 .hero{
-  background:linear-gradient(160deg,#14143a 0%,#0d162e 100%);
+  background:linear-gradient(160deg,#2a1a0a 0%,#1a1008 100%);
   border-radius:14px;padding:18px 14px 14px;
-  border:1px solid rgba(80,120,255,.12);text-align:center;
+  border:1px solid rgba(255,150,50,.12);text-align:center;
 }
-.hero .env{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(180deg,#6b9fff,#3b6cf4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
-.hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
+.hero .env{
+  font-size:42px;font-weight:900;letter-spacing:4px;
+  background:linear-gradient(180deg,#fbbf24,#f59e0b);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .desc{font-size:12px;color:#c8944e;margin-top:2px}
+.hero .ratio{font-size:13px;color:#b8904a;margin-top:4px}
 
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
 .idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
 .idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
-.idx .c{font-size:12px;font-weight:700}
+.idx .c{font-size:12px;font-weight:700;color:#ef4444}
 
 .grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
 .cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
@@ -46,11 +50,17 @@ body{
 .c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
 
 .margin-strip{display:flex;gap:6px}
-.mg{flex:1;background:rgba(255,255,255,.03);border-radius:10px;padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04)}
+.mg{
+  flex:1;background:rgba(255,255,255,.03);border-radius:10px;
+  padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04);
+}
 .mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
 .mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
 
-.sec{background:rgba(255,255,255,.025);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,.05)}
+.sec{
+  background:rgba(255,255,255,.025);border-radius:12px;
+  padding:12px;border:1px solid rgba(255,255,255,.05);
+}
 .sec .sh{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .sec .sh .si{font-size:16px}
 .sec .sh .st{font-size:14px;font-weight:800;color:#e0e6f0}
@@ -64,105 +74,114 @@ body{
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
-.pill.y{background:rgba(249,115,22,.15);color:#fdba74}
+.pill.g{background:rgba(34,197,94,.15);color:#86efac}
 
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
 
 .ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
+
 .screen-break{margin:0;height:0;border:none}
+
+.chart-mini{
+  width:100%;height:80px;margin-top:8px;
+  background:rgba(255,255,255,.02);border-radius:8px;
+  overflow:hidden;position:relative;
+}
+.chart-mini svg{width:100%;height:100%}
 </style>
 </head>
 <body>
 <div class="page">
 
+  <!-- ═══ 第一屏 ═══ -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.07.22 周三</span>
+    <span class="date-tag">2026.07.23 周四</span>
   </div>
 
   <div class="hero">
-    <div class="env">冰 点</div>
-    <div class="desc">涨跌比 0.39 · 涨 1530 跌 3876</div>
-    <div class="ratio">修复仅一日 · 重返冰点 · 高低切换极致</div>
+    <div class="env">普 涨</div>
+    <div class="desc">涨跌比 3.53 · 涨 4260 跌 1208</div>
   </div>
 
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">3867</div><div class="c" style="color:#22c55e">+0.07%</div></div>
-    <div class="idx"><div class="n">深证</div><div class="v">14061</div><div class="c" style="color:#ef4444">-1.42%</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">3567</div><div class="c" style="color:#ef4444">-3.23%</div></div>
+    <div class="idx"><div class="n">上证</div><div class="v">3877</div><div class="c" style="color:#ef4444">+0.25%</div></div>
+    <div class="idx"><div class="n">深证</div><div class="v">14376</div><div class="c" style="color:#ef4444">+0.44%</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">3725</div><div class="c" style="color:#ef4444">+0.25%</div></div>
   </div>
 
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">0.39</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv">48</div><div class="bl">涨停</div><div class="be c-r">跌停 10</div></div>
-    <div class="cell"><div class="bv">2.67</div><div class="bl">万亿</div><div class="be c-r">缩量 10.3%</div></div>
-    <div class="cell"><div class="bv">43.4%</div><div class="bl">炸板率</div></div>
-    <div class="cell"><div class="bv">8.3%</div><div class="bl">晋级率</div><div class="be">极低</div></div>
-    <div class="cell"><div class="bv" style="color:#22c55e">+1.0亿</div><div class="bl">融资净买</div><div class="be">终结13连降</div></div>
+    <div class="cell"><div class="bv c-y">3.53</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv c-r">129</div><div class="bl">涨停</div><div class="be c-g">跌停 2</div></div>
+    <div class="cell"><div class="bv">2.21</div><div class="bl">万亿</div><div class="be c-g">缩量 17.2%</div></div>
+    <div class="cell"><div class="bv">17.7%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">16.7%</div><div class="bl">晋级率</div><div class="be">小幅恢复</div></div>
+    <div class="cell"><div class="bv c-r">-3.78%</div><div class="bl">科创50</div><div class="be c-r">独跌</div></div>
   </div>
 
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.70 万亿</div><div class="ml">融资余额 · 终结13连降</div></div>
-    <div class="mg"><div class="mv" style="color:#22c55e">272.3%</div><div class="ml">担保比例 · 回升至安全区</div></div>
-    <div class="mg"><div class="mv">-3100 亿</div><div class="ml">6月末峰值至今降幅</div></div>
+    <div class="mg"><div class="mv">2.70 万亿</div><div class="ml">融资余额 · 净买入 ↑</div></div>
+    <div class="mg"><div class="mv">270.0%</div><div class="ml">担保比例 · 安全</div></div>
+    <div class="mg"><div class="mv">+7.4 亿</div><div class="ml">连续 2 日净买入</div></div>
   </div>
 
   <div class="sec">
     <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">德明利 半导体 · 中国巨石 玻纤 · 晶华新材 化学制品 · 立霸股份 · 甘咨询 · 依依股份 · 信通电子 · 中岩大地<br>与能源主线<span style="color:#22c55e;font-weight:700">完全不重叠</span> → 极致冰点高低切</div>
+    <div class="sb">仅 2 家跌停（冰点出清）<br>与主线<span style="color:#22c55e;font-weight:700">完全不重叠</span> → 健康普涨，非暴跌恐慌</div>
   </div>
 
+  <!-- ═══ 第二屏 ═══ -->
   <div class="screen-break"></div>
 
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 能源链 13 家</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 能源链 37 家涨停</span></div>
     <div class="sb">
-      电力 8 家 · 煤炭 1 · 油服 1 · 贵金属 3<br>
-      催化：<span style="color:#fca5a5">用电负荷创新高 15.18 亿千瓦</span> +<br>
-      美伊第 11 天互袭 · 布油破 92 · 金价破 4100<br>
-      <span style="color:#fca5a5;font-weight:700">定性：中期主线候选</span>（历史命中 0% 降半档信心）
+      电网设备 29 家 ＋ 电力 8 家<br>
+      催化：<span style="color:#fca5a5;font-weight:700">国网第三批特高压招标 292 亿超 2025 全年</span><br>
+      ＋ 十五五电网投资 5 万亿 ＋ 用电负荷 15.51 亿创新高<br>
+      <span style="color:#fca5a5;font-weight:700">定性：S 级三重共振 · 中期主线 · 高潮延续</span>
     </div>
     <div class="pills">
-      <span class="pill r">立新能源·5板</span><span class="pill r">华银电力·4板</span>
-      <span class="pill r">乐山电力·4天3</span><span class="pill r">华电辽能·3天2</span>
-      <span class="pill r">华电能源·3天2</span><span class="pill r">大有能源·7天4</span>
-      <span class="pill r">中曼石油·3天2</span>
-      <span class="pill y">山金国际</span><span class="pill y">盛达资源·2板</span>
-      <span class="pill">新中港</span><span class="pill">世茂能源</span><span class="pill">新能股份</span>
+      <span class="pill r">立新能源·6板</span><span class="pill r">长缆科技·3板</span>
+      <span class="pill r">中国西电</span><span class="pill r">保变电气</span>
+      <span class="pill r">中曼石油·8天4板</span><span class="pill">国电南自</span>
+      <span class="pill">中能电气 20cm</span><span class="pill">和顺电气 20cm</span>
+      <span class="pill">双杰电气 20cm</span><span class="pill">金冠股份 20cm</span>
+      <span class="pill">盛达资源·3板</span><span class="pill">+26 更多</span>
     </div>
   </div>
 
   <div class="sec sec-yel">
-    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 医药/算力/超节点</span></div>
+    <div class="sh"><span class="si">🟡</span><span class="st">次线</span></div>
     <div class="sb">
-      创新药脉冲 5 家 · 算力租赁 3 家 · 通信 2 家<br>
-      <span style="color:#fb923c;font-weight:700">海南海药</span> 6天3板 · 哈三联 · 罗欣药业<br>
-      <span style="color:#fb923c;font-weight:700">美利云</span> 3连板 · 证通电子 · 利通电子 2连板<br>
-      <span style="color:#fb923c;font-weight:700">共进股份</span> 4天3板 · 瑞斯康达<br>
-      艾艾精工 10天7板（独立妖股）<br>
-      半导体仅存 3 家残余（28→3，一日游确认）
+      <span style="color:#fb923c;font-weight:700">医药</span> 7 家（五洲医疗 20cm·2板 / 汉森·2板 / 哈三联·2板）<br>
+      <span style="color:#fb923c;font-weight:700">锂矿</span> 多股涨停（碳酸锂 +4% 站上 14.7 万）<br>
+      <span style="color:#fb923c;font-weight:700">算力</span> 美利云 4板 · 鸿博股份 1板<br>
+      <span style="color:#fb923c;font-weight:700">油气</span> 中曼石油持续强势<br>
+      <span style="color:#86efac;font-weight:700">半导体</span> 0 家涨停 · 科创 50 -3.78%
     </div>
   </div>
 
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      冰点→修复→<span style="color:#fca5a5;font-weight:700">重返冰点</span>（07-17→07-21→07-22）<br>
-      能源链从 30→2→13 家"跷跷板脉冲"<br>
-      <span style="color:#fca5a5;font-weight:700">是真正的中期主线切换，还是<br>又一次「今天最强明天被弃」？</span>
+      冰点→普涨仅 6 个交易日，<br>
+      能源链 <span style="color:#f59e0b;font-weight:700">37 家涨停</span> 爆发式扩张<br>
+      是「中期主线确立」还是「高潮赶顶」？<br>
+      <span style="color:#fca5a5;font-weight:700">周五分化日 + 回检能源链定性 0% 命中率<br>＝ 强制降半档信心</span>
     </div>
   </div>
 
   <div class="sec sec-blu">
-    <div class="sh"><span class="si">📌</span><span class="st">次日观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">能源链能否守住<span style="color:#fca5a5;font-weight:700">≥10 家涨停</span>？低于 6 家则一日游证伪</div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">立新能源能否封<span style="color:#60a5fa;font-weight:700">6 连板</span>？断板则龙头不认可</div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">科技线是否反弹造成跷跷板<span style="color:#fca5a5;font-weight:700">反噬能源</span>？存量市铁律：今天最强明天被切</div></div>
+    <div class="sh"><span class="si">📌</span><span class="st">周五观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">立新能源能否封 7 板？炸板已 7 次，<span style="color:#fca5a5;font-weight:700">高位分歧加大</span></div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">能源链涨停能否 ≥15 家？<span style="color:#f59e0b;font-weight:700">&lt;15＝高潮→分化确认</span></div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">成交额能否 ≥2.0 万亿？<span style="color:#60a5fa;font-weight:700">再缩＝流动性枯竭风险</span></div></div>
   </div>
 
-  <div class="ft">记录用 · 不构成投资建议</div>
+  <div class="ft">loho · 记录用 · 不构成投资建议</div>
 
 </div>
 </body>
