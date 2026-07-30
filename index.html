@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>7.29 复盘</title>
+<title>7.30 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -24,13 +24,13 @@ body{
 }
 
 .hero{
-  background:linear-gradient(160deg,#1a1a3a 0%,#0d162e 100%);
+  background:linear-gradient(160deg,#2a1520 0%,#160d1e 100%);
   border-radius:14px;padding:18px 14px 14px;
   border:1px solid rgba(120,120,255,.12);text-align:center;
 }
 .hero .env{
   font-size:42px;font-weight:900;letter-spacing:4px;
-  background:linear-gradient(180deg,#a0b8ff,#5b82f4);
+  background:linear-gradient(180deg,#8fd6a0,#22c55e);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 .hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
@@ -74,6 +74,7 @@ body{
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
+.pill.g{background:rgba(34,197,94,.13);color:#86efac}
 
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
@@ -89,93 +90,106 @@ body{
   <!-- ═══ 第一屏 ═══ -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.07.29 周三</span>
+    <span class="date-tag">2026.07.30 周四</span>
   </div>
 
   <!-- Hero -->
   <div class="hero">
-    <div class="env">分 化 偏 涨</div>
-    <div class="desc">涨跌比 3.50 · 涨 4253 跌 1215</div>
-    <div class="ratio">成交 2.31 万亿 放量 13.4%</div>
+    <div class="env">冰 点</div>
+    <div class="desc">涨跌比 0.49 · 涨 1768 跌 3635</div>
+    <div class="ratio">成交 2.36 万亿 放量 2.0%</div>
   </div>
 
-  <!-- 三大指数 -->
+  <!-- 指数与外盘 -->
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">3828</div><div class="c c-r">+0.40%</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">3379</div><div class="c c-r">+1.55%</div></div>
-    <div class="idx"><div class="n">科创50</div><div class="v">1679</div><div class="c c-g">-0.87%</div></div>
+    <div class="idx"><div class="n">沪指</div><div class="v">-0.62%</div><div class="c c-g">收跌</div></div>
+    <div class="idx"><div class="n">银行</div><div class="v">+2.47%</div><div class="c c-r">防御亮</div></div>
+    <div class="idx"><div class="n">费半 T-1</div><div class="v">+5.41%</div><div class="c c-r">已被今日消化</div></div>
   </div>
 
   <!-- 核心数据 6 格 -->
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">3.50</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv">86</div><div class="bl">涨停</div><div class="be c-r">跌停 12</div></div>
-    <div class="cell"><div class="bv">2.31</div><div class="bl">万亿</div><div class="be c-g">放量 13.4%</div></div>
-    <div class="cell"><div class="bv">未采集</div><div class="bl">炸板率</div><div class="be">东财空</div></div>
-    <div class="cell"><div class="bv">16.2%</div><div class="bl">晋级率</div><div class="be c-g">回升</div></div>
-    <div class="cell"><div class="bv c-r">-4.49%</div><div class="bl">费半隔夜</div></div>
+    <div class="cell"><div class="bv c-g">0.49</div><div class="bl">涨跌比</div><div class="be c-g">冰点</div></div>
+    <div class="cell"><div class="bv c-r">56</div><div class="bl">涨停</div><div class="be c-g">跌停 83</div></div>
+    <div class="cell"><div class="bv">2.36</div><div class="bl">万亿</div><div class="be c-r">放量 2.0%</div></div>
+    <div class="cell"><div class="bv">26.8%</div><div class="bl">炸板率</div><div class="be">炸板 19 家</div></div>
+    <div class="cell"><div class="bv">14.0%</div><div class="bl">晋级率</div><div class="be c-g">昨 16.2%</div></div>
+    <div class="cell"><div class="bv c-g">冬</div><div class="bl">洪攻略季节</div><div class="be c-g">缩圈·空仓</div></div>
   </div>
 
   <!-- 两融 -->
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.65 万亿</div><div class="ml">融资余额 · -298亿净偿还</div></div>
-    <div class="mg"><div class="mv">265.9%</div><div class="ml">担保比例 · 回落警戒边缘</div></div>
-    <div class="mg"><div class="mv">银行 +0.18%</div><div class="ml">防御信号灭（vs 沪指+0.40%）</div></div>
+    <div class="mg"><div class="mv">2.62 万亿</div><div class="ml">融资余额 · -256亿（连4日净偿还）</div></div>
+    <div class="mg"><div class="mv">269.0%</div><div class="ml">担保比例 · 4日净偿还750亿</div></div>
+    <div class="mg"><div class="mv">银行 +2.47%</div><div class="ml">防御信号亮（vs 沪指-0.62%）</div></div>
   </div>
 
   <!-- 跌停结构 -->
   <div class="sec">
-    <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">通富微电连续2日跌停 · 创新医疗跌停<br>全口径仅 <span style="color:#22c55e;font-weight:700">12 家</span>（昨日 52 家急剧收敛）<br>→ <span style="color:#22c55e;font-weight:700">高低切确认</span>，非主线崩塌</div>
+    <div class="sh"><span class="si">📉</span><span class="st">跌停结构 · 科技链系统性出清</span></div>
+    <div class="sb">
+      全口径 <span style="color:#22c55e;font-weight:700">83 家</span>（昨日仅 12 家，一日暴增 7 倍，创 7/13 以来新高）<br>
+      元件5 + 半导体4 + 通信4 + 光学光电3 = <span style="color:#22c55e;font-weight:700">科技链约 20 家</span><br>
+      汽车零部件 5 家跌停（vs 6 家涨停）· 电网 3 跌停（vs 5 涨停）<br>
+      → 不是主线崩塌，是<span style="color:#22c55e;font-weight:700">科技链踩踏 + 板块内新旧标的剧烈切换</span>
+    </div>
+    <div class="pills">
+      <span class="pill g">贤丰控股·换手32%</span><span class="pill g">至纯科技</span>
+      <span class="pill g">新洁能</span><span class="pill g">博通集成</span>
+      <span class="pill g">景旺电子</span><span class="pill g">移远通信</span>
+    </div>
   </div>
 
   <!-- ═══ 第二屏 ═══ -->
   <div class="screen-break"></div>
 
-  <!-- 主线 -->
+  <!-- 主线1：汽车零部件 -->
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 大消费 涨停潮（18家）</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 汽车零部件（6家·新浮现）</span></div>
     <div class="sb">
-      乳业/食品/零售/教育/酒店五分支<br>
-      催化：<span style="color:#fca5a5">原奶周期反转</span>（中信建投/开源，07-29）<br>
-      + 科技基金67只全转跌→避险切换<br>
-      <span style="color:#fca5a5;font-weight:700">定性：待验证新主线</span>（换届日降半档）
+      今日最大涨停集群，但内部 <span style="color:#f87171;font-weight:700">6涨停 vs 5跌停</span> 双向撕裂<br>
+      涨停多为小盘/次新，跌停为机构重仓 → 公募出逃+游资接低位<br>
+      催化：<span style="color:#fca5a5">未找到 S/A 级独立催化（C级）</span><br>
+      <span style="color:#fca5a5;font-weight:700">定性：散点脉冲·待验证</span>（个股行情，非板块共振）
     </div>
     <div class="pills">
-      <span class="pill r">一鸣食品·2板</span><span class="pill r">欢乐家·20cm</span>
-      <span class="pill">均瑶健康</span><span class="pill">李子园</span>
-      <span class="pill r">东百集团·2板</span><span class="pill">全通教育·20cm</span>
-      <span class="pill">传智教育·3板</span><span class="pill">华天酒店·3板</span>
+      <span class="pill r">明新旭腾·4板</span><span class="pill r">纳百川·20cm</span>
+      <span class="pill">浙江世宝</span><span class="pill">大明电子</span>
+      <span class="pill">文灿股份</span><span class="pill">至信股份</span>
     </div>
   </div>
 
-  <!-- 次线1：电网 -->
-  <div class="sec" style="border-color:rgba(59,130,246,.15);background:rgba(59,130,246,.04)">
-    <div class="sh"><span class="si">💙</span><span class="st">次线 · 电网/电力（7家）回暖</span></div>
-    <div class="sb">
-      电网5+电力2，旧主线回暖<br>
-      催化：辽宁负荷创纪录+国网3100亿（21财经/财联社）<br>
-      <span style="color:#60a5fa;font-weight:700">定性：不定性</span>（⚠️能源链0%命中率·回检纪律）
-    </div>
-    <div class="pills">
-      <span class="pill">汉缆股份·5天3板</span><span class="pill">中电鑫龙·5天3板</span>
-      <span class="pill">金龙羽</span><span class="pill">海兴电力</span>
-    </div>
-  </div>
-
-  <!-- 次线2：游戏 + MLCC -->
+  <!-- 主线2：大消费 -->
   <div class="sec sec-yel">
-    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 游戏脉冲 + MLCC复活</span></div>
+    <div class="sh"><span class="si">🟡</span><span class="st">主线 · 大消费（9家·昨18家萎缩50%）</span></div>
     <div class="sb">
-      <b style="color:#fb923c">游戏</b>：巨人/恺英/电魂，主力净流入16.1亿全市场第1，<span style="color:#fb923c;font-weight:700">脉冲待验证</span>（B级）<br>
-      <b style="color:#fb923c">MLCC</b>：风华高科3天2板（4次炸板回封）+昀冢20cm<br>
-      催化：TrendForce涨价现货价2-3倍（证券时报，07-29）<br>
-      <span style="color:#fb923c;font-weight:700">定性：分歧复活</span>
+      乳业 7→2 家、食品 4→1、零售 3→1，华天酒店 3 板断板<br>
+      但一鸣食品 3 连板<span style="color:#fb923c;font-weight:700">缩量秒板</span>（0.49亿成交/0.7%换手）= 全场最强<br>
+      催化：<span style="color:#fdba74">原奶周期反转（A级，腾讯财经/21经济，07-29）</span><br>
+      + 五粮液中报预增 88.8%–98.97%（证券时报，07-29）<br>
+      <span style="color:#fb923c;font-weight:700">定性：退潮进行中·龙一未倒</span>
     </div>
     <div class="pills">
-      <span class="pill">巨人网络</span><span class="pill">恺英网络</span>
-      <span class="pill">风华高科·3天2板</span><span class="pill">昀冢科技·20cm</span>
-      <span class="pill">贤丰控股·3天2板</span>
+      <span class="pill r">一鸣食品·3板</span><span class="pill r">传智教育·4板</span>
+      <span class="pill">均瑶健康·2板</span><span class="pill">舍得酒业</span>
+      <span class="pill">金徽酒</span><span class="pill g">华天酒店·3板断</span>
+    </div>
+  </div>
+
+  <!-- 次线：电网 + 存储独苗 -->
+  <div class="sec" style="border-color:rgba(59,130,246,.15);background:rgba(59,130,246,.04)">
+    <div class="sh"><span class="si">💙</span><span class="st">次线 · 电网5家 + 存储独苗</span></div>
+    <div class="sb">
+      <b style="color:#60a5fa">电网/电力</b>：5 家维持集群，但 3 家跌停同现<br>
+      催化：辽宁负荷 4410 万千瓦创纪录（21财经，07-28）<br>
+      <span style="color:#60a5fa;font-weight:700">定性：不定性</span>（⚠️能源链 0% 命中率·回检强制纪律）<br>
+      <b style="color:#60a5fa">德明利</b>：367 亿天量首板，换手 18.6%，长鑫链映射<br>
+      → 板块暴跌中的独苗，<span style="color:#60a5fa;font-weight:700">不可视为半导体回暖</span>
+    </div>
+    <div class="pills">
+      <span class="pill r">海兴电力·2板</span><span class="pill r">金龙羽·2板</span>
+      <span class="pill">昊创瑞通·20cm</span><span class="pill">广电电气</span>
+      <span class="pill r">德明利·367亿</span>
     </div>
   </div>
 
@@ -183,31 +197,32 @@ body{
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      高低切全面确认（跌停52→12）+ 大消费18家接棒<br>
-      隔夜费半-4.49%→低开→午后V形反转，科创50仍-0.87%<br>
-      <span style="color:#f59e0b;font-weight:700">大消费是"真主线"还是"下一个一日游"？</span><br>
-      明日乳业≥4家+一鸣3板即升格新主线
+      冰点<span style="color:#f59e0b;font-weight:700">放量</span>（跌停83 vs 涨停56，成交却放量2.0%）<br>
+      T-1 夜盘费半 +5.41% → A 股科技反而 20 家跌停 = 利好出尽<br>
+      <span style="color:#f59e0b;font-weight:700">是科技恐慌出清的最后一跌，还是去杠杆的开始？</span><br>
+      关键：明日跌停能否从 83 收敛至 30 以下
     </div>
   </div>
 
   <!-- 明日观察 -->
   <div class="sec sec-blu">
     <div class="sh"><span class="si">📌</span><span class="st">明日观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">乳业分支能否维持 <span style="color:#60a5fa;font-weight:700">≥4家涨停</span>？一鸣食品能否3连板？→ 大消费升格新主线</div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">汉缆/中电鑫龙能否续板？电网集群能否≥3家？（能源链0%命中率，仅观察）</div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">风华高科能否守住 <span style="color:#60a5fa;font-weight:700">45.1元</span>？科技V形修复是否吸回资金？</div></div>
+    <div class="obs"><div class="no">1</div><div class="ot">跌停数能否收敛至 <span style="color:#60a5fa;font-weight:700">30 家以下</span>？若涨跌比&lt;0.3 或跌停&gt;50 → 出清非尾声，仓位压至 0.5 成</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">一鸣食品能否 <span style="color:#60a5fa;font-weight:700">4 连板</span>？断板 = 大消费最后支柱倒塌，清仓消费</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">明新旭腾能否 5 连板 + 汽车零部件涨停 ≥4 家？否则一日游确认</div></div>
+    <div class="obs"><div class="no">4</div><div class="ot"><span style="color:#c084fc;font-weight:700">今晚美股</span>（条件式）：费半跌&gt;2% → 明日二次踩踏；<b>费半涨&gt;2% 而 A 股仍不跟涨 → 内生抛压主导，比外盘更空</b></div></div>
   </div>
 
   <!-- 杠杆ETF份额 -->
   <div class="sec" style="border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04)">
     <div class="sh"><span class="si">💱</span><span class="st" style="color:#c084fc">杠杆ETF份额（趋势中后期信号）</span></div>
     <div class="sb" style="display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;font-size:12px">
-      <div>SOXL <span style="color:#e0e6f0;font-weight:700">147.80M</span> <span style="color:#22c55e;font-weight:700">+1.30%</span></div>
-      <div>RAM <span style="color:#e0e6f0;font-weight:700">43.40M</span> <span style="color:#ef4444;font-weight:700">-1.59%</span></div>
-      <div>MUU <span style="color:#e0e6f0;font-weight:700">151.73M</span> <span style="color:#ef4444;font-weight:700">-1.43%</span></div>
-      <div>07709 <span style="color:#e0e6f0;font-weight:700">826.00M</span> <span style="color:#22c55e;font-weight:700">+0.12%</span></div>
+      <div>SOXL <span style="color:#e0e6f0;font-weight:700">158.20M</span> <span style="color:#ef4444;font-weight:700">+7.04%</span></div>
+      <div>RAM <span style="color:#e0e6f0;font-weight:700">45.39M</span> <span style="color:#ef4444;font-weight:700">+4.59%</span></div>
+      <div>MUU <span style="color:#e0e6f0;font-weight:700">150.95M</span> <span style="color:#22c55e;font-weight:700">-0.51%</span></div>
+      <div>07709 <span style="color:#e0e6f0;font-weight:700">826.00M</span> <span style="color:#8899bb;font-weight:700">持平</span></div>
     </div>
-    <div class="sb" style="margin-top:6px;font-size:11.5px;color:#8899bb">四标的均无「价格新高但份额转跌」背离 · 处暴跌通道(SOXL-14.5%/RAM-17.9%/MUU-18.0%/07709-29.3%)，SOXL份额回补=抄底资金 · 数据截至07-28</div>
+    <div class="sb" style="margin-top:6px;font-size:11.5px;color:#8899bb">四标的均无「价格新高但份额转跌」背离 · 价格全线重挫（SOXL $91.99 / RAM $8.40 / MUU $19.63 / 07709 NAV 31.04），但 SOXL+RAM 份额逆势增 = 美股侧抢反弹抄底，与 A 股科技踩踏不可简单类比 · 数据截至 07-29</div>
   </div>
 
   <div class="ft">记录用 · 不构成投资建议</div>
