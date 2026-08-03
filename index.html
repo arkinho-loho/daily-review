@@ -3,64 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>7.31 复盘</title>
+<title>8.3 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
-  background:#0c0c18;
-  display:flex;justify-content:center;
-}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#0c0c18;display:flex;justify-content:center}
 .page{width:100%;max-width:414px;padding:12px 10px 16px;display:flex;flex-direction:column;gap:8px}
-
-.top-row{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 4px;
-}
+.top-row{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
 .top-row .brand{font-size:11px;color:#556;letter-spacing:2px}
-.top-row .date-tag{
-  font-size:11px;color:#889;background:rgba(255,255,255,.06);
-  padding:2px 10px;border-radius:10px;
-}
-
-.hero{
-  background:linear-gradient(160deg,#1a1530 0%,#120d20 100%);
-  border-radius:14px;padding:18px 14px 14px;
-  border:1px solid rgba(120,120,255,.12);text-align:center;
-}
-.hero .env{
-  font-size:42px;font-weight:900;letter-spacing:4px;
-  background:linear-gradient(180deg,#fb923c,#f97316);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
-.hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
-.hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
-
+.top-row .date-tag{font-size:11px;color:#889;background:rgba(255,255,255,.06);padding:2px 10px;border-radius:10px}
+.hero{background:linear-gradient(160deg,#1a1a30 0%,#0d162e 100%);border-radius:14px;padding:18px 14px 14px;border:1px solid rgba(255,165,0,.12);text-align:center}
+.hero .env{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(180deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .desc{font-size:12px;color:#b8a880;margin-top:2px}
+.hero .ratio{font-size:13px;color:#998866;margin-top:4px}
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
 .idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
 .idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
 .idx .c{font-size:12px;font-weight:700}
-.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
-
 .grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
 .cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
 .cell .bv{font-size:20px;font-weight:900;color:#e0e6f0}
 .cell .bl{font-size:10px;color:#6677aa;margin-top:1px}
 .cell .be{font-size:10px;font-weight:700;margin-top:1px}
-
+.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
 .margin-strip{display:flex;gap:6px}
-.mg{
-  flex:1;background:rgba(255,255,255,.03);border-radius:10px;
-  padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04);
-}
+.mg{flex:1;background:rgba(255,255,255,.03);border-radius:10px;padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04)}
 .mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
 .mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
-
-.sec{
-  background:rgba(255,255,255,.025);border-radius:12px;
-  padding:12px;border:1px solid rgba(255,255,255,.05);
-}
+.sec{background:rgba(255,255,255,.025);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,.05)}
 .sec .sh{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .sec .sh .si{font-size:16px}
 .sec .sh .st{font-size:14px;font-weight:800;color:#e0e6f0}
@@ -68,111 +38,130 @@ body{
 .sec-red{border-color:rgba(239,68,68,.15);background:rgba(239,68,68,.04)}
 .sec-red .st{color:#f87171}
 .sec-yel{border-color:rgba(249,115,22,.12)}
-.sec-pur{border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04)}
-
+.sec-yel .st{color:#fb923c}
+.sec-blu{border-color:rgba(59,130,246,.12)}
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
-.pill.g{background:rgba(34,197,94,.13);color:#86efac}
-
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.obs .oi{font-size:12px;color:#b0bed8;line-height:1.55;flex:1}
-
-.foot{text-align:center;font-size:10px;color:#445;padding:10px 0 4px}
-
-.e-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
-.e-cell{background:rgba(255,255,255,.03);border-radius:8px;padding:8px 10px}
-.e-cell .ec{font-size:10px;color:#aaa;margin-bottom:2px}
-.e-cell .ev{font-size:14px;font-weight:800;color:#e0e6f0}
-.e-cell .ed{font-size:11px;font-weight:700}
-.spark{width:100%;height:48px;margin-top:6px}
+.obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
+.etf-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
+.etf-cell{background:rgba(255,255,255,.03);border-radius:8px;padding:7px 8px;text-align:center}
+.etf-cell .ec{font-size:11px;font-weight:700;color:#c8d4e6}
+.etf-cell .es{font-size:14px;font-weight:900;color:#e0e6f0}
+.etf-cell .ed{font-size:10px;font-weight:700;margin-top:1px}
+.ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
+.screen-break{margin:0;height:0;border:none}
 </style>
 </head>
 <body>
 <div class="page">
 
-<div class="top-row">
-  <span class="brand">loho 每日复盘</span>
-  <span class="date-tag">7.31 周五</span>
-</div>
-
-<div class="hero">
-  <div class="env">分化偏涨</div>
-  <div class="desc">涨 4691 / 跌 728 · 比 6.44</div>
-  <div class="ratio">涨停 103 · 跌停 0 · 2.56万亿 +8.5%</div>
-</div>
-
-<div class="grid6">
-  <div class="cell"><div class="bv">103</div><div class="bl">涨停</div><div class="be c-r">炸板 107</div></div>
-  <div class="cell"><div class="bv">0</div><div class="bl">跌停</div><div class="be c-g">无跌停</div></div>
-  <div class="cell"><div class="bv">2.56</div><div class="bl">万亿</div><div class="be c-r">+8.5%</div></div>
-  <div class="cell"><div class="bv">32.1%</div><div class="bl">晋级率</div></div>
-  <div class="cell"><div class="bv">51.9%</div><div class="bl">炸板率</div></div>
-  <div class="cell"><div class="bv">9板</div><div class="bl">最高连板</div><div class="be">爱丽家居</div></div>
-</div>
-
-<div class="margin-strip">
-  <div class="mg"><div class="mv">2.58万亿</div><div class="ml">融资余额</div></div>
-  <div class="mg"><div class="mv" style="color:#ef4444">-368亿</div><div class="ml">日变动</div></div>
-  <div class="mg"><div class="mv">5日</div><div class="ml">连续偿还</div></div>
-  <div class="mg"><div class="mv">0家</div><div class="ml">跌停结构</div></div>
-</div>
-
-<div class="sec sec-red">
-  <div class="sh"><span class="si">🔴</span><span class="st">AI数字传媒/软件 · 22家</span></div>
-  <div class="sb">广告营销7+软件开发5+数字媒体4+IT服务4+影视2<br>龙头：昆仑万维(20cm,60.7亿) · 蓝色光标(20cm,85.5亿)<br><span style="color:#fca5a5">S级催化</span>：政治局"人工智能+"深层实施(07-30晚)+发改委AI 30%+增长(07-31)+费半+8.19%<br>定性：<span style="color:#fca5a5">S级催化首板集群·待2天验证（降半档）</span></div>
-  <div class="pills">
-    <span class="pill r">昆仑万维</span><span class="pill r">蓝色光标</span><span class="pill r">福昕软件</span><span class="pill r">用友网络</span><span class="pill r">易点天下</span><span class="pill r">中文在线</span>
+  <!-- ═══ 第一屏 ═══ -->
+  <div class="top-row">
+    <span class="brand">A 股 复 盘</span>
+    <span class="date-tag">2026.08.03 周一</span>
   </div>
-</div>
 
-<div class="sec sec-yel">
-  <div class="sh"><span class="si">🟡</span><span class="st">大消费 · 7家</span></div>
-  <div class="sb">龙头：一鸣食品(4连板缩量秒板,极优)<br>华天酒店5板 · 安记食品3天2板 · 安德利/宏辉<br><span style="color:#fb923c">A级催化</span>：原奶反转+五粮液预增89%<br>定性：龙一独舞·不扩集群</div>
-</div>
-
-<div class="sec">
-  <div class="sh"><span class="si">⚡️</span><span class="st">电网/电力 · 3家</span></div>
-  <div class="sb">新能股份8天4板 · 协鑫能科 · 柘中股份<br>⚠️ 回检纪律：能源链0%命中率→不定性</div>
-</div>
-
-<div class="sec">
-  <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
-  <div class="sb">AI 22家首板集群→政治局S级催化下的真主线确立，还是MLCC式一日游？周一验证</div>
-</div>
-
-<div class="sec">
-  <div class="sh"><span class="si">📌</span><span class="st">下周一观察</span></div>
-  <div class="obs"><div class="no">1</div><div class="oi">AI集群≥10家续板（底线）+ 2板梯队≥5家出现</div></div>
-  <div class="obs"><div class="no">2</div><div class="oi">一鸣食品5连板 → 消费龙一守住</div></div>
-  <div class="obs"><div class="no">3</div><div class="oi">若今晚费半跌>2%而下周一AI仍续板≥10家→政策内生驱动确认可加仓至1.5成</div></div>
-</div>
-
-<div class="sec sec-pur">
-  <div class="sh"><span class="si">💱</span><span class="st">杠杆ETF份额 · 截至07-30</span></div>
-  <div class="e-grid">
-    <div class="e-cell"><div class="ec">SOXL 3x半导体</div><div class="ev">169.40M</div><div class="ed" style="color:#ef4444">+11.20M (+7.08%)</div></div>
-    <div class="e-cell"><div class="ec">RAM 2x DRAM</div><div class="ev">46.22M</div><div class="ed" style="color:#ef4444">+0.83M (+1.83%)</div></div>
-    <div class="e-cell"><div class="ec">MUU 2x 美光</div><div class="ev">145.95M</div><div class="ed" style="color:#22c55e">-5.00M (-3.31%) ⚠️</div></div>
-    <div class="e-cell"><div class="ec">07709 2x SK海力士</div><div class="ev">829.00M</div><div class="ed" style="color:#ef4444">+3.00M (+0.36%)</div></div>
+  <div class="hero">
+    <div class="env">分化偏涨</div>
+    <div class="desc">涨 4005 / 跌 1466 · 涨跌比 2.73</div>
+    <div class="ratio">AI 22→0 一日游确认 · 电网 3→21 逆势暴涨</div>
   </div>
-  <div style="font-size:10px;color:#aaa;margin-top:4px;text-align:center">MUU价格+37.39%但份额-3.31%→疑似趋势中后期背离</div>
-</div>
 
-<div class="sec">
-  <div class="sh"><span class="si">📈</span><span class="st">情绪序列 · 最近20日</span></div>
-  <svg class="spark" viewBox="0 0 400 48" preserveAspectRatio="none">
-    <polyline fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-linejoin="round"
-      points="0,35 21,33 42,32 63,28 84,19 105,15 126,12 147,38 168,37 189,35 210,34 231,15 252,5 273,35 294,7 315,40 336,38 357,6 378,37 399,3"/>
-  </svg>
-  <div style="font-size:10px;color:#6677aa;display:flex;justify-content:space-between">
-    <span>7-10</span><span>7-14</span><span>7-17</span><span>7-22</span><span>7-27</span><span>7-31</span>
+  <div class="idx-row">
+    <div class="idx"><div class="n">上证</div><div class="v">3810</div><div class="c c-g">-0.59%</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">3303</div><div class="c c-g">-1.24%</div></div>
+    <div class="idx"><div class="n">科创50</div><div class="v">1553</div><div class="c c-r">-5.08%</div></div>
   </div>
-</div>
 
-<div class="foot">loho · 仅供研究，不构成投资建议 · 07-31 · 回检65.4%</div>
+  <div class="grid6">
+    <div class="cell"><div class="bv c-y">2.73</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv">83</div><div class="bl">涨停</div><div class="be c-g">跌停 9</div></div>
+    <div class="cell"><div class="bv">2.01</div><div class="bl">万亿</div><div class="be c-g">缩量 21.4%</div></div>
+    <div class="cell"><div class="bv">17.6%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">22.7%</div><div class="bl">晋级率</div><div class="be">AI全断板拖累</div></div>
+    <div class="cell"><div class="bv c-r">-5.08%</div><div class="bl">科创50</div></div>
+  </div>
 
+  <div class="margin-strip">
+    <div class="mg"><div class="mv">2.59 万亿</div><div class="ml">融资余额 · +46亿 结束5连降</div></div>
+    <div class="mg"><div class="mv">269.5%</div><div class="ml">担保比例 · 回升安全区</div></div>
+    <div class="mg"><div class="mv">9.59%</div><div class="ml">交易占比 · 活跃</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
+    <div class="sb">半导体2 · 玻纤2 · 软件1 · 元件1 · 汽车1 · 金属1<br>科技链（半4+元1+软1=5/9=56%）<span style="color:#ef4444;font-weight:700">持续出逃</span>，与AI一日游<span style="color:#ef4444;font-weight:700">高度重叠</span></div>
+  </div>
+
+  <!-- ═══ 第二屏 ═══ -->
+  <div class="screen-break"></div>
+
+  <div class="sec sec-red">
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 电网/电力/设备 · 21家</span></div>
+    <div class="sb">
+      S级催化：国常会<span style="color:#fca5a5;font-weight:700">"六张网"</span>→新型电网列为核心<br>
+      十五五投资超5万亿 + 核电新增8台机组<br>
+      <span style="color:#fca5a5;font-weight:700">定性：S级首板集群·待2天验证（降半档）</span><br>
+      ⚠️ 能源链历史0%命中率→强制纪律
+    </div>
+    <div class="pills">
+      <span class="pill r">百利电气</span><span class="pill r">长城电工</span>
+      <span class="pill r">华电辽能</span><span class="pill r">中国核建</span>
+      <span class="pill r">久盛电气·20cm</span><span class="pill">深南电A</span>
+      <span class="pill">乐山电力</span><span class="pill">新能股份·2板</span>
+      <span class="pill">顺钠·8天5板</span><span class="pill">长缆·10天6板</span>
+      <span class="pill">风范股份</span><span class="pill">汇金通</span>
+      <span class="pill">华菱线缆</span><span class="pill">…共21家</span>
+    </div>
+  </div>
+
+  <div class="sec sec-yel">
+    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 消费龙一独舞</span></div>
+    <div class="sb">
+      <span style="color:#fb923c;font-weight:700">一鸣食品</span> 5天5板 · 全场最强（缩量秒板）<br>
+      养元饮品首板 · 消费仅2家集群未扩<br>
+      化学/光伏 10 家（高争民爆4板·通威首板）· 散点脉冲
+    </div>
+  </div>
+
+  <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
+    <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
+    <div class="sb">
+      AI 22→0 一日游 → <span style="color:#fca5a5;font-weight:700">MLCC模式完美重演</span><br>
+      电网 21家首板 → <span style="color:#f59e0b;font-weight:700">第三次测试换届纪律</span><br>
+      电网≥10家续板=真主线 / 萎缩→一日游三连
+    </div>
+  </div>
+
+  <div class="sec sec-blu">
+    <div class="sh"><span class="si">📌</span><span class="st">周二观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">电网集群续板能否 ≥<span style="color:#60a5fa;font-weight:700">10家</span>？中国核建须续板</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">若今晚费半跌&gt;2%但明天电网仍续板≥10家 → <span style="color:#fca5a5;font-weight:700">内外背离=政策内生驱动</span></div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">一鸣能否<span style="color:#fca5a5;font-weight:700">6连板</span>？消费龙一不倒便是底线</div></div>
+  </div>
+
+  <!-- 杠杆ETF卡片 -->
+  <div class="sec" style="border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04)">
+    <div class="sh"><span class="si">💱</span><span class="st">杠杆ETF份额 · 截至 07-31</span></div>
+    <div class="etf-grid">
+      <div class="etf-cell"><div class="ec">SOXL</div><div class="es">170.25M</div><div class="ed c-r">+0.50%</div></div>
+      <div class="etf-cell"><div class="ec">RAM</div><div class="es">45.86M</div><div class="ed c-g">-0.78%</div></div>
+      <div class="etf-cell"><div class="ec">MUU</div><div class="es">143.48M</div><div class="ed c-g">-1.69%</div></div>
+      <div class="etf-cell"><div class="ec">07709</div><div class="es">984.00M</div><div class="ed c-r">+18.70%</div></div>
+    </div>
+    <div class="sb" style="margin-top:6px">四标的无明显背离 · 07709份额暴涨为创设/申购驱动非散户追高 · 份额日变动含再平衡噪声</div>
+  </div>
+
+  <!-- 回检 -->
+  <div class="sec" style="border-color:rgba(34,197,94,.12);background:rgba(34,197,94,.02)">
+    <div class="sh"><span class="si">✅</span><span class="st">回检 · 07-31→08-03 命中率 100%</span></div>
+    <div class="sb">主线定性 2/2 · 个股靶点 3/3 · 风控 1/1<br><span style="color:#22c55e;font-weight:700">AI一日游确认 → MLCC模式完美重演</span></div>
+  </div>
+
+  <div class="ft">记录用 · 不构成投资建议 · loho</div>
 </div>
 </body>
 </html>
