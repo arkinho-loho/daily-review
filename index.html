@@ -3,34 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>8.3 复盘</title>
+<title>8.04 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#0c0c18;display:flex;justify-content:center}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:#0c0c18;
+  display:flex;justify-content:center;
+}
 .page{width:100%;max-width:414px;padding:12px 10px 16px;display:flex;flex-direction:column;gap:8px}
-.top-row{display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+
+.top-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4px;
+}
 .top-row .brand{font-size:11px;color:#556;letter-spacing:2px}
-.top-row .date-tag{font-size:11px;color:#889;background:rgba(255,255,255,.06);padding:2px 10px;border-radius:10px}
-.hero{background:linear-gradient(160deg,#1a1a30 0%,#0d162e 100%);border-radius:14px;padding:18px 14px 14px;border:1px solid rgba(255,165,0,.12);text-align:center}
-.hero .env{font-size:42px;font-weight:900;letter-spacing:4px;background:linear-gradient(180deg,#fbbf24,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero .desc{font-size:12px;color:#b8a880;margin-top:2px}
-.hero .ratio{font-size:13px;color:#998866;margin-top:4px}
+.top-row .date-tag{
+  font-size:11px;color:#889;background:rgba(255,255,255,.06);
+  padding:2px 10px;border-radius:10px;
+}
+
+.hero{
+  background:linear-gradient(160deg,#2a1520 0%,#160d1e 100%);
+  border-radius:14px;padding:18px 14px 14px;
+  border:1px solid rgba(120,120,255,.12);text-align:center;
+}
+.hero .env{
+  font-size:42px;font-weight:900;letter-spacing:4px;
+  background:linear-gradient(180deg,#fca5a5,#ef4444);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
+.hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
+
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
 .idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
 .idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
 .idx .c{font-size:12px;font-weight:700}
+.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
+
 .grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
 .cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
 .cell .bv{font-size:20px;font-weight:900;color:#e0e6f0}
 .cell .bl{font-size:10px;color:#6677aa;margin-top:1px}
 .cell .be{font-size:10px;font-weight:700;margin-top:1px}
-.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
+
 .margin-strip{display:flex;gap:6px}
-.mg{flex:1;background:rgba(255,255,255,.03);border-radius:10px;padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04)}
+.mg{
+  flex:1;background:rgba(255,255,255,.03);border-radius:10px;
+  padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04);
+}
 .mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
 .mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
-.sec{background:rgba(255,255,255,.025);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,.05)}
+
+.sec{
+  background:rgba(255,255,255,.025);border-radius:12px;
+  padding:12px;border:1px solid rgba(255,255,255,.05);
+}
 .sec .sh{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .sec .sh .si{font-size:16px}
 .sec .sh .st{font-size:14px;font-weight:800;color:#e0e6f0}
@@ -40,17 +70,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 .sec-yel{border-color:rgba(249,115,22,.12)}
 .sec-yel .st{color:#fb923c}
 .sec-blu{border-color:rgba(59,130,246,.12)}
+
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
+.pill.g{background:rgba(34,197,94,.13);color:#86efac}
+
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
-.etf-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px}
-.etf-cell{background:rgba(255,255,255,.03);border-radius:8px;padding:7px 8px;text-align:center}
-.etf-cell .ec{font-size:11px;font-weight:700;color:#c8d4e6}
-.etf-cell .es{font-size:14px;font-weight:900;color:#e0e6f0}
-.etf-cell .ed{font-size:10px;font-weight:700;margin-top:1px}
+
+.emo-seq{display:flex;flex-wrap:wrap;gap:3px;font-size:10px;line-height:1.6}
+.emo-seq span{padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.04);color:#8899bb;white-space:nowrap}
+.emo-seq span.sg{color:#86efac;background:rgba(34,197,94,.08)}
+.emo-seq span.sr{color:#fca5a5;background:rgba(239,68,68,.08)}
+
 .ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
 .screen-break{margin:0;height:0;border:none}
 </style>
@@ -61,107 +95,142 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
   <!-- ═══ 第一屏 ═══ -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.08.03 周一</span>
+    <span class="date-tag">2026.08.04 周二</span>
   </div>
 
+  <!-- Hero -->
   <div class="hero">
-    <div class="env">分化偏涨</div>
-    <div class="desc">涨 4005 / 跌 1466 · 涨跌比 2.73</div>
-    <div class="ratio">AI 22→0 一日游确认 · 电网 3→21 逆势暴涨</div>
+    <div class="env">普 涨</div>
+    <div class="desc">涨跌比 2.08 · 涨 3642 跌 1747</div>
+    <div class="ratio">成交 2.23 万亿 放量 10.8%</div>
   </div>
 
+  <!-- 三大指数 -->
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">3810</div><div class="c c-g">-0.59%</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">3303</div><div class="c c-g">-1.24%</div></div>
-    <div class="idx"><div class="n">科创50</div><div class="v">1553</div><div class="c c-r">-5.08%</div></div>
+    <div class="idx"><div class="n">上证</div><div class="v">+0.33%</div><div class="c c-r">收涨</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">+5.64%</div><div class="c c-r">双创领涨</div></div>
+    <div class="idx"><div class="n">科创50</div><div class="v">+4.09%</div><div class="c c-r">四连阳</div></div>
   </div>
 
+  <!-- 核心数据 6 格 -->
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">2.73</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv">83</div><div class="bl">涨停</div><div class="be c-g">跌停 9</div></div>
-    <div class="cell"><div class="bv">2.01</div><div class="bl">万亿</div><div class="be c-g">缩量 21.4%</div></div>
-    <div class="cell"><div class="bv">17.6%</div><div class="bl">炸板率</div></div>
-    <div class="cell"><div class="bv">22.7%</div><div class="bl">晋级率</div><div class="be">AI全断板拖累</div></div>
-    <div class="cell"><div class="bv c-r">-5.08%</div><div class="bl">科创50</div></div>
+    <div class="cell"><div class="bv c-r">2.08</div><div class="bl">涨跌比</div><div class="be c-r">普涨</div></div>
+    <div class="cell"><div class="bv c-r">138</div><div class="bl">涨停</div><div class="be c-g">跌停 0</div></div>
+    <div class="cell"><div class="bv">2.23</div><div class="bl">万亿</div><div class="be c-r">放量 10.8%</div></div>
+    <div class="cell"><div class="bv">15</div><div class="bl">炸板</div><div class="be">炸板率 9.8%</div></div>
+    <div class="cell"><div class="bv c-r">25.3%</div><div class="bl">晋级率</div><div class="be c-y">连板率回升</div></div>
+    <div class="cell"><div class="bv">-</div><div class="bl">北向</div><div class="be">未采集</div></div>
   </div>
 
+  <!-- 两融 T-1=08-03 -->
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.59 万亿</div><div class="ml">融资余额 · +46亿 结束5连降</div></div>
-    <div class="mg"><div class="mv">269.5%</div><div class="ml">担保比例 · 回升安全区</div></div>
-    <div class="mg"><div class="mv">9.59%</div><div class="ml">交易占比 · 活跃</div></div>
+    <div class="mg"><div class="mv">2.58 万亿</div><div class="ml">融资余额 · -87亿（连续2降）</div></div>
+    <div class="mg"><div class="mv">268.88%</div><div class="ml">担保比例 · 融券 222亿</div></div>
+    <div class="mg"><div class="mv">创业+5.64%</div><div class="ml">双创领涨 · 弹性回归</div></div>
   </div>
 
-  <div class="sec">
-    <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">半导体2 · 玻纤2 · 软件1 · 元件1 · 汽车1 · 金属1<br>科技链（半4+元1+软1=5/9=56%）<span style="color:#ef4444;font-weight:700">持续出逃</span>，与AI一日游<span style="color:#ef4444;font-weight:700">高度重叠</span></div>
+  <!-- 跌停结构 -->
+  <div class="sec" style="border-color:rgba(34,197,94,.15);background:rgba(34,197,94,.03)">
+    <div class="sh"><span class="si">✅</span><span class="st" style="color:#86efac">跌停结构 · 全口径仅1家</span></div>
+    <div class="sb">
+      东财池口径 <span style="color:#22c55e;font-weight:700">0 家跌停</span>（昨日 9 家，情绪快速修复）<br>
+      全口径仅 1 家，<span style="color:#22c55e;font-weight:700">无板块集中</span><br>
+      → 双创大涨 + 跌停清零 = 系统性风险暂时消退
+    </div>
   </div>
 
   <!-- ═══ 第二屏 ═══ -->
   <div class="screen-break"></div>
 
+  <!-- 情绪序列 · 近20日 -->
+  <div class="sec sec-blu">
+    <div class="sh"><span class="si">📊</span><span class="st">情绪序列 · 近 20 日</span></div>
+    <div class="emo-seq">
+      <span class="sr">06-15 普涨 2.65 164-12</span>
+      <span>06-16 分化 1.02 141-11</span>
+      <span>06-17 退潮 0.46 98-21</span>
+      <span>06-18 退潮 0.60 103-42</span>
+      <span>06-22 分化 1.18 155-33</span>
+      <span>06-23 分化 1.05 125-53</span>
+      <span>06-24 退潮 0.36 106-66</span>
+      <span>06-25 退潮 0.29 95-91</span>
+      <span>06-26 退潮 0.17 73-46</span>
+      <span>06-29 分化 0.84 127-75</span>
+      <span>06-30 分化偏涨 1.29 172-22</span>
+      <span class="sr">07-01 普涨 3.78 226-13</span>
+      <span>07-10 分化偏涨 2.25 95-7</span>
+      <span>07-13 冰点 0.17 33-187</span>
+      <span>07-14 分化偏涨 3.38 89-29</span>
+      <span>07-21 分化偏涨 1.35 121-29</span>
+      <span>07-28 分化 0.94 68-52</span>
+      <span>07-31 分化偏涨 6.44 103-0</span>
+      <span>08-03 分化偏涨 2.73 83-9</span>
+      <span class="sr">08-04 普涨 2.08 141-1</span>
+    </div>
+  </div>
+
+  <!-- 主线1：PCB/元件/CPO -->
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 电网/电力/设备 · 21家</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · PCB/元件/CPO（15家·新浮现）</span></div>
     <div class="sb">
-      S级催化：国常会<span style="color:#fca5a5;font-weight:700">"六张网"</span>→新型电网列为核心<br>
-      十五五投资超5万亿 + 核电新增8台机组<br>
-      <span style="color:#fca5a5;font-weight:700">定性：S级首板集群·待2天验证（降半档）</span><br>
-      ⚠️ 能源链历史0%命中率→强制纪律
+      今日最大涨停集群，<span style="color:#f87171;font-weight:700">15 家涨停</span>，龙一东山精密(153亿) + 光库科技(20cm CPO)<br>
+      催化：<span style="color:#fca5a5">英伟达CPO量产 + 电子布涨价 + AI PCB 900亿（A级）</span><br>
+      <span style="color:#fca5a5;font-weight:700">定性：三重共振首板集群 · 待 2 天验证</span>
     </div>
     <div class="pills">
-      <span class="pill r">百利电气</span><span class="pill r">长城电工</span>
-      <span class="pill r">华电辽能</span><span class="pill r">中国核建</span>
-      <span class="pill r">久盛电气·20cm</span><span class="pill">深南电A</span>
-      <span class="pill">乐山电力</span><span class="pill">新能股份·2板</span>
-      <span class="pill">顺钠·8天5板</span><span class="pill">长缆·10天6板</span>
-      <span class="pill">风范股份</span><span class="pill">汇金通</span>
-      <span class="pill">华菱线缆</span><span class="pill">…共21家</span>
+      <span class="pill r">东山精密·153亿</span><span class="pill r">光库科技·20cm</span>
+      <span class="pill">胜宏科技</span><span class="pill">深南电路</span>
+      <span class="pill">沪电股份</span><span class="pill">鹏鼎控股</span>
     </div>
   </div>
 
+  <!-- 主线2：CXO/创新药 -->
   <div class="sec sec-yel">
-    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 消费龙一独舞</span></div>
+    <div class="sh"><span class="si">🟡</span><span class="st">主线 · CXO/创新药（8家·业绩驱动）</span></div>
     <div class="sb">
-      <span style="color:#fb923c;font-weight:700">一鸣食品</span> 5天5板 · 全场最强（缩量秒板）<br>
-      养元饮品首板 · 消费仅2家集群未扩<br>
-      化学/光伏 10 家（高争民爆4板·通威首板）· 散点脉冲
+      龙一药明康德 <span style="color:#fb923c;font-weight:700">105 亿 A+H 双涨停</span><br>
+      催化：<span style="color:#fdba74">半年报超预期 + 全面上调全年指引（A级）</span><br>
+      <span style="color:#fb923c;font-weight:700">定性：业绩共振 · 机构回补</span>
+    </div>
+    <div class="pills">
+      <span class="pill r">药明康德·105亿</span><span class="pill r">康龙化成</span>
+      <span class="pill">泰格医药</span><span class="pill">凯莱英</span>
+      <span class="pill">美迪西</span><span class="pill">昭衍新药</span>
     </div>
   </div>
 
+  <!-- 核心矛盾 -->
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      AI 22→0 一日游 → <span style="color:#fca5a5;font-weight:700">MLCC模式完美重演</span><br>
-      电网 21家首板 → <span style="color:#f59e0b;font-weight:700">第三次测试换届纪律</span><br>
-      电网≥10家续板=真主线 / 萎缩→一日游三连
+      电网一日游<span style="color:#f59e0b;font-weight:700">第三次确认</span> → 换届纪律已是绝对铁律<br>
+      PCB/CXO 首板明天<span style="color:#f59e0b;font-weight:700">第四次测试</span>——基本面支撑能否打破魔咒？<br>
+      <span style="color:#f59e0b;font-weight:700">双创暴涨（创业+5.64% / 科创+4.09%）vs 融资连续2日净偿还 = 增量信心 vs 存量去杠杆的对抗</span>
     </div>
   </div>
 
+  <!-- 明日观察 -->
   <div class="sec sec-blu">
-    <div class="sh"><span class="si">📌</span><span class="st">周二观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">电网集群续板能否 ≥<span style="color:#60a5fa;font-weight:700">10家</span>？中国核建须续板</div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">若今晚费半跌&gt;2%但明天电网仍续板≥10家 → <span style="color:#fca5a5;font-weight:700">内外背离=政策内生驱动</span></div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">一鸣能否<span style="color:#fca5a5;font-weight:700">6连板</span>？消费龙一不倒便是底线</div></div>
+    <div class="sh"><span class="si">📌</span><span class="st">明日观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">PCB 集群<span style="color:#60a5fa;font-weight:700">≥8 家续板</span> → 首次打破换届魔咒；若 &lt;4 家回落 → 一日游第五次确认，清仓 PCB</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">CXO<span style="color:#60a5fa;font-weight:700">≥5 家续板</span> → 业绩驱动确认，可中线跟踪；断板过半 → 仅药明个股行情</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot"><span style="color:#c084fc;font-weight:700">今晚费半</span>：若跌 &gt;2% → 明日科技承压，PCB/CXO 断板概率大幅提升；费半涨而 A 股仍不续板 → 内生偏弱确认</div></div>
   </div>
 
-  <!-- 杠杆ETF卡片 -->
+  <!-- 杠杆ETF份额 -->
   <div class="sec" style="border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04)">
-    <div class="sh"><span class="si">💱</span><span class="st">杠杆ETF份额 · 截至 07-31</span></div>
-    <div class="etf-grid">
-      <div class="etf-cell"><div class="ec">SOXL</div><div class="es">170.25M</div><div class="ed c-r">+0.50%</div></div>
-      <div class="etf-cell"><div class="ec">RAM</div><div class="es">45.86M</div><div class="ed c-g">-0.78%</div></div>
-      <div class="etf-cell"><div class="ec">MUU</div><div class="es">143.48M</div><div class="ed c-g">-1.69%</div></div>
-      <div class="etf-cell"><div class="ec">07709</div><div class="es">984.00M</div><div class="ed c-r">+18.70%</div></div>
+    <div class="sh"><span class="si">💱</span><span class="st" style="color:#c084fc">杠杆ETF份额（趋势中后期信号）</span></div>
+    <div class="sb" style="display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;font-size:12px">
+      <div>SOXL <span style="color:#e0e6f0;font-weight:700">170.30M</span> <span style="color:#ef4444;font-weight:700">+0.03%</span></div>
+      <div>RAM <span style="color:#e0e6f0;font-weight:700">45.07M</span> <span style="color:#22c55e;font-weight:700">-1.72%</span></div>
+      <div>MUU <span style="color:#e0e6f0;font-weight:700">142.68M</span> <span style="color:#22c55e;font-weight:700">-0.56%</span></div>
+      <div>07709 <span style="color:#e0e6f0;font-weight:700">954.00M</span> <span style="color:#22c55e;font-weight:700">-3.05%</span></div>
     </div>
-    <div class="sb" style="margin-top:6px">四标的无明显背离 · 07709份额+18.7%为一级市场净申购(创设)非拆分，SK海力士暴跌后抄底流入 · 份额日变动含再平衡噪声</div>
+    <div class="sb" style="margin-top:6px;font-size:11.5px;color:#8899bb">四标的无背离 · SOXL 持平，RAM/MUU 小幅流出，07709 前期创设(+18.7%)后正常回吐 · 数据截至 08-03</div>
   </div>
 
-  <!-- 回检 -->
-  <div class="sec" style="border-color:rgba(34,197,94,.12);background:rgba(34,197,94,.02)">
-    <div class="sh"><span class="si">✅</span><span class="st">回检 · 07-31→08-03 命中率 100%</span></div>
-    <div class="sb">主线定性 2/2 · 个股靶点 3/3 · 风控 1/1<br><span style="color:#22c55e;font-weight:700">AI一日游确认 → MLCC模式完美重演</span></div>
-  </div>
+  <div class="ft">记录用 · 不构成投资建议</div>
 
-  <div class="ft">记录用 · 不构成投资建议 · loho</div>
 </div>
 </body>
 </html>
