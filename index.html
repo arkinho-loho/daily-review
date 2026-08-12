@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>8.11 复盘</title>
+<title>8.12 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -12,7 +12,6 @@ body{
   display:flex;justify-content:center;
 }
 .page{width:100%;max-width:414px;padding:12px 10px 16px;display:flex;flex-direction:column;gap:8px}
-
 .top-row{
   display:flex;align-items:center;justify-content:space-between;
   padding:0 4px;
@@ -22,45 +21,33 @@ body{
   font-size:11px;color:#889;background:rgba(255,255,255,.06);
   padding:2px 10px;border-radius:10px;
 }
-
 .hero{
-  background:linear-gradient(160deg,#142814 0%,#0d1e0d 100%);
+  background:linear-gradient(160deg,#14143a 0%,#0d162e 100%);
   border-radius:14px;padding:18px 14px 14px;
-  border:1px solid rgba(0,180,0,.12);text-align:center;
+  border:1px solid rgba(80,120,255,.12);text-align:center;
 }
-.hero .env{
-  font-size:42px;font-weight:900;letter-spacing:4px;
-  background:linear-gradient(180deg,#66cc66,#228822);
+.hero .env{font-size:42px;font-weight:900;letter-spacing:4px;
+  background:linear-gradient(180deg,#ff9f6b,#eb6834);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
-.hero .desc{font-size:12px;color:#669966;margin-top:2px}
-.hero .ratio{font-size:13px;color:#889977;margin-top:4px}
-
+.hero .desc{font-size:12px;color:#cc9977;margin-top:2px}
+.hero .ratio{font-size:13px;color:#998866;margin-top:4px}
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
 .idx .n{font-size:11px;color:#7788aa;margin-bottom:2px}
 .idx .v{font-size:18px;font-weight:800;color:#e0e6f0}
-.idx .c{font-size:12px;font-weight:700;color:#22c55e}
-
+.idx .c{font-size:12px;font-weight:700}
+.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
 .grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
 .cell{background:rgba(255,255,255,.035);border-radius:10px;padding:9px 6px;text-align:center}
 .cell .bv{font-size:20px;font-weight:900;color:#e0e6f0}
 .cell .bl{font-size:10px;color:#6677aa;margin-top:1px}
 .cell .be{font-size:10px;font-weight:700;margin-top:1px}
-.c-g{color:#22c55e}.c-r{color:#ef4444}.c-y{color:#f59e0b}
-
 .margin-strip{display:flex;gap:6px}
-.mg{
-  flex:1;background:rgba(255,255,255,.03);border-radius:10px;
-  padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04);
-}
+.mg{flex:1;background:rgba(255,255,255,.03);border-radius:10px;padding:8px 10px;text-align:center;border:1px solid rgba(255,255,255,.04)}
 .mg .mv{font-size:17px;font-weight:900;color:#f59e0b}
 .mg .ml{font-size:10px;color:#6677aa;margin-top:1px}
-
-.sec{
-  background:rgba(255,255,255,.025);border-radius:12px;
-  padding:12px;border:1px solid rgba(255,255,255,.05);
-}
+.sec{background:rgba(255,255,255,.025);border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,.05)}
 .sec .sh{display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .sec .sh .si{font-size:16px}
 .sec .sh .st{font-size:14px;font-weight:800;color:#e0e6f0}
@@ -70,156 +57,135 @@ body{
 .sec-yel{border-color:rgba(249,115,22,.12)}
 .sec-yel .st{color:#fb923c}
 .sec-blu{border-color:rgba(59,130,246,.12)}
-.sec-purp{border-color:rgba(168,85,247,.15);background:rgba(168,85,247,.04)}
-.sec-purp .st{color:#c084fc}
-
 .pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .pill{font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.07);color:#c8d4e6;font-weight:600}
 .pill.r{background:rgba(239,68,68,.15);color:#fca5a5}
-
 .obs{display:flex;gap:6px;margin-top:6px;align-items:flex-start}
 .obs .no{width:18px;height:18px;border-radius:50%;background:rgba(59,130,246,.15);color:#60a5fa;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .obs .ot{font-size:12.5px;color:#b0bed8;line-height:1.7}
-
-.etf-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
-.etf-item{background:rgba(168,85,247,.06);border-radius:8px;padding:8px 10px;text-align:center;border:1px solid rgba(168,85,247,.1)}
-.etf-item .code{font-size:11px;color:#a78bfa;font-weight:700}
-.etf-item .shares{font-size:16px;font-weight:900;color:#e0e6f0}
-.etf-item .delta{font-size:11px;font-weight:700;margin-top:1px}
-.etf-item .delta.up{color:#ef4444}.etf-item .delta.dn{color:#22c55e}.etf-item .delta.nil{color:#8899aa}
-
+.etf-card{background:rgba(168,85,247,.04);border-radius:12px;padding:10px 12px;border:1px solid rgba(168,85,247,.15)}
+.etf-card .eh{font-size:12px;color:#a78bfa;font-weight:700;margin-bottom:6px}
+.etf-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px}
+.etf-item{text-align:center}
+.etf-item .ec{font-size:10px;color:#6677aa}
+.etf-item .ev{font-size:13px;font-weight:700;color:#e0e6f0}
+.etf-item .ed{font-size:10px;font-weight:700;margin-top:1px}
+.etf-card .en{font-size:10px;color:#8899aa;margin-top:4px;line-height:1.5}
 .ft{text-align:center;font-size:9px;color:#333355;letter-spacing:1px}
-
 .screen-break{margin:0;height:0;border:none}
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- ═══ 第一屏 ═══ -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.08.11 周二</span>
+    <span class="date-tag">2026.08.12 周三</span>
   </div>
 
   <div class="hero">
-    <div class="env">退 潮</div>
-    <div class="desc">涨跌比 0.43 · 涨 1615 跌 3777</div>
+    <div class="env">分 化 偏 涨</div>
+    <div class="desc">涨跌比 3.23 · 涨 4128 跌 1280</div>
   </div>
 
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">-0.82%</div><div class="c" style="color:#22c55e">缩量退潮</div></div>
-    <div class="idx"><div class="n">深证</div><div class="v">-0.40%</div><div class="c" style="color:#22c55e">退潮持续</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">+0.34%</div><div class="c" style="color:#ef4444">医药拉动</div></div>
+    <div class="idx"><div class="n">上证</div><div class="v c-g">+0.32%</div><div class="c">低开高走</div></div>
+    <div class="idx"><div class="n">深证</div><div class="v c-g">+1.09%</div><div class="c">强于沪指</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v c-g">+1.49%</div><div class="c">领涨</div></div>
   </div>
 
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">0.43</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv">60</div><div class="bl">涨停</div><div class="be" style="color:#22c55e">跌停 2</div></div>
-    <div class="cell"><div class="bv">2.34</div><div class="bl">万亿</div><div class="be" style="color:#22c55e">缩量 8.0%</div></div>
-    <div class="cell"><div class="bv">22.7%</div><div class="bl">炸板率</div></div>
-    <div class="cell"><div class="bv">16.2%</div><div class="bl">晋级率</div><div class="be">低位</div></div>
-    <div class="cell"><div class="bv" style="color:#ef4444">6→1</div><div class="bl">电网设备崩塌</div></div>
+    <div class="cell"><div class="bv c-y">3.23</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv">97</div><div class="bl">涨停</div><div class="be c-r">跌停 0</div></div>
+    <div class="cell"><div class="bv">2.17</div><div class="bl">万亿</div><div class="be c-r">缩量 7.2%</div></div>
+    <div class="cell"><div class="bv">12.4%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">17.4%</div><div class="bl">晋级率</div><div class="be">中低位</div></div>
+    <div class="cell"><div class="bv c-g">6日净买</div><div class="bl">融资连续</div><div class="be c-y">+13亿</div></div>
   </div>
 
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.64 万亿</div><div class="ml">融资余额 · +141亿</div></div>
-    <div class="mg"><div class="mv">283.6%</div><div class="ml">担保比例 · 安全</div></div>
-    <div class="mg"><div class="mv">连5日↑</div><div class="ml">逆势加杠杆</div></div>
+    <div class="mg"><div class="mv">2.64 万亿</div><div class="ml">融资余额 · 净买入 ↑</div></div>
+    <div class="mg"><div class="mv">281.7%</div><div class="ml">担保比例 · 安全</div></div>
+    <div class="mg"><div class="mv">+13 亿</div><div class="ml">今日净买入 · 缩</div></div>
   </div>
 
   <div class="sec">
     <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">电网设备<span style="color:#ef4444;font-weight:700">北京科锐</span>跌停<br>与主线<span style="color:#f59e0b;font-weight:700">不重叠</span> → 高低切换，非主线崩塌<br>元件<span style="color:#ef4444;font-weight:700">4家炸板</span>(宝鼎8板/风华/达利/贤丰) → PCB主线终结</div>
+    <div class="sb"><span style="color:#22c55e;font-weight:700">0 跌停</span> — 恐慌情绪完全消退<br>昨日仅 2 只跌停，今日全面清零</div>
   </div>
 
-  <!-- ═══ 第二屏 ═══ -->
   <div class="screen-break"></div>
 
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 汽车零部件 7家</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 机器人/设备制造 · 20 家跨板块</span></div>
     <div class="sb">
-      退潮中<span style="color:#fca5a5;font-weight:700">唯一扩大集群</span>（4→7），封板率100%<br>
-      催化：<span style="color:#fca5a5">宇树科技IPO + 人形机器人出货量暴增+300%</span><br>
-      ＋ 祥晋股份北交所上市 ＋ 零部件企业转型液冷/机器人<br>
-      <span style="color:#fca5a5;font-weight:700">定性：A级 · 退潮中封板率100%最强集群</span>
+      专用 8 + 通用 8 + 汽零 4 = <span style="color:#fca5a5;font-weight:700">20 家</span>最大集群<br>
+      催化：<span style="color:#fca5a5">宇树 IPO 定价 150.8 元</span>＋高盛人形机器人 2032=50 万台<br>
+      <span style="color:#fca5a5;font-weight:700">定性：A 级 · 真立木 · 游资龙双核</span>
     </div>
     <div class="pills">
-      <span class="pill r">秦安股份·3板</span><span class="pill r">朗博科技·3板</span>
-      <span class="pill">登云股份</span><span class="pill">北特科技</span>
-      <span class="pill">新泉股份</span><span class="pill">斯菱智驱·20cm</span>
-      <span class="pill">福赛科技·20cm</span>
+      <span class="pill r">秦安股份·4板</span><span class="pill r">同力天启·3板</span>
+      <span class="pill r">华东数控·3板</span><span class="pill r">巨轮智能·2板</span>
+      <span class="pill">中鼎股份</span><span class="pill">日发精机</span>
+      <span class="pill">宗申动力</span><span class="pill">江钨装备</span>
+    </div>
+  </div>
+
+  <div class="sec sec-red">
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 房地产开发 · 8 家</span></div>
+    <div class="sb">
+      催化：<span style="color:#fca5a5">国务院住房消费定位 S 级</span>＋北京新政公积金 340 万<br>
+      <span style="color:#fca5a5;font-weight:700">定性：A 级 · 真立木 · 政策龙</span>
+    </div>
+    <div class="pills">
+      <span class="pill r">京投发展·3板</span><span class="pill r">香江控股·月翻倍</span>
+      <span class="pill">市北高新</span><span class="pill">滨江集团</span>
+      <span class="pill">新城控股</span><span class="pill">荣盛发展</span>
     </div>
   </div>
 
   <div class="sec sec-yel">
-    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 医药 6家 + 专用设备 4家</span></div>
+    <div class="sh"><span class="si">🟡</span><span class="st">次线 · 电网 + 医药 + 通信</span></div>
     <div class="sb">
-      <span style="color:#fb923c;font-weight:700">百花医药</span> 6板6连（总高度标）<br>
-      <span style="color:#fb923c;font-weight:700">甘李药业</span> S级：GLP-1出海 6200万欧首付<br>
-      开开实业4板 · 哈药股份3板 · 第一医药2板<br>
-      专用设备4家（同力天启2板）C级催化
-    </div>
-    <div class="pills">
-      <span class="pill r">百花·6板</span><span class="pill r">甘李药业</span>
-      <span class="pill r">开开·4板</span><span class="pill">哈药·3板</span>
-      <span class="pill">第一医药·2板</span><span class="pill">同力天启·2板</span>
+      <span style="color:#fb923c;font-weight:700">电网 5 家</span>：风范股份 6 板 · 长城科技 2 板<br>
+      <span style="color:#fb923c;font-weight:700">百花医药</span> 7 板 7 连 · <span style="color:#fca5a5">打破 7 板魔咒！</span> · 但板块枯萎<br>
+      宝鼎科技反包涨停 · 元件「假死反弹」
     </div>
   </div>
 
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      退潮加速 涨停<span style="color:#f59e0b;font-weight:700">99→58骤降39%</span><br>
-      vs 融资<span style="color:#f59e0b;font-weight:700">连续5日逆势加杠杆 +141亿</span><br>
-      元件/PCB被费半-2.94%共振打崩·主线终结<br>
-      <span style="color:#fca5a5;font-weight:700">汽车零部件能否在退潮中独立续板接棒新主线？</span>
+      退潮快速回暖（涨跌比 <span style="color:#f59e0b;font-weight:700">0.43→3.23</span>）<br>
+      但成交连缩 3 日，量价背离<br>
+      <span style="color:#fca5a5;font-weight:700">机器人 20 家能否在缩量下确立主线？</span><br>
+      <span style="color:#fca5a5;">地产 8 家首板能否打破一日游诅咒？</span>
     </div>
   </div>
 
   <div class="sec sec-blu">
-    <div class="sh"><span class="si">📌</span><span class="st">次日观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">汽车零部件明日涨停<span style="color:#fca5a5;font-weight:700">≥3家</span>（含连板）→主线确立；否则<span style="color:#22c55e">一日游</span></div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">百花医药能否<span style="color:#60a5fa;font-weight:700">7板</span>打破魔咒？断板→医药全线避险</div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">若今晚费半<span style="color:#60a5fa;font-weight:700">再跌>2%</span>→A股半导体加速出清；费半±2%震荡则元件企稳</div></div>
+    <div class="sh"><span class="si">📌</span><span class="st">明日观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">秦安 ≥5 板 + 整板块 ≥<span style="color:#fca5a5;font-weight:700">8</span> 家涨停 → 主线确立；否则缩圈</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">京投发展 ≥4 板 + 地产首板续板 ≥<span style="color:#60a5fa;font-weight:700">3</span> → 确认；否则一日游</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">若今晚费半涨 &gt;<span style="color:#fca5a5">1.5%</span> → 机器人+AI共振；跌 &gt;2% → 反弹打断</div></div>
   </div>
 
-  <!-- 💱 杠杆ETF份额 -->
-  <div class="sec sec-purp">
-    <div class="sh"><span class="si">💱</span><span class="st">杠杆ETF份额 · 08-10/11</span></div>
-    <div class="etf-grid" style="grid-template-columns:1fr 1fr 1fr">
-      <div class="etf-item">
-        <div class="code">SOXL</div>
-        <div class="shares">170.75M</div>
-        <div class="delta up">+0.18%</div>
-      </div>
-      <div class="etf-item">
-        <div class="code">RAM</div>
-        <div class="shares">47.45M</div>
-        <div class="delta up">+1.15%</div>
-      </div>
-      <div class="etf-item">
-        <div class="code">MUU</div>
-        <div class="shares">138.55M</div>
-        <div class="delta dn">-2.11%</div>
-      </div>
-      <div class="etf-item">
-        <div class="code">SKUU</div>
-        <div class="shares">9.64M</div>
-        <div class="delta nil">新上市</div>
-      </div>
-      <div class="etf-item">
-        <div class="code">07709</div>
-        <div class="shares">1008M</div>
-        <div class="delta up">+2.86%</div>
-      </div>
+  <div class="etf-card">
+    <div class="eh">💱 杠杆 ETF 份额监控</div>
+    <div class="etf-grid">
+      <div class="etf-item"><div class="ec">SOXL</div><div class="ev">170.95M</div><div class="ed c-g">+0.12%</div></div>
+      <div class="etf-item"><div class="ec">RAM</div><div class="ev">48.77M</div><div class="ed c-g">+2.78%</div></div>
+      <div class="etf-item"><div class="ec">MUU</div><div class="ev">137.78M</div><div class="ed c-r">-0.56%</div></div>
+      <div class="etf-item"><div class="ec">07709</div><div class="ev">1,075.5M</div><div class="ed c-g">+6.70%</div></div>
     </div>
-    <div style="font-size:11px;color:#8899aa;margin-top:6px;text-align:center">
-      无背离 · MUU赎回vs 07709流入分化 · SKUU美股版海力士2x<br>截至08-10/11 · 免费门户滞后1交易日
-    </div>
+    <div class="en">无背离 · 07709 抄底资金持续涌入 +6.70%<br>数据截至 2026-08-11 · 回检命中 62.5%</div>
   </div>
 
-  <div class="ft">记录用 · 不构成投资建议</div>
+  <div style="text-align:center;font-size:10px;color:#556;margin-top:2px">
+    📈 ETF估申赎 23只合计 -88.3亿 | 创业板唯一+9.2亿流入
+  </div>
+
+  <div class="ft">loho · 记录用 · 不构成投资建议</div>
 
 </div>
 </body>
