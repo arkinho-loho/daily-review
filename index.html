@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>8.17 复盘</title>
+<title>8.19 复盘</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -18,17 +18,17 @@ body{
 .top-row .date-tag{font-size:11px;color:#889;background:rgba(255,255,255,.06);padding:2px 10px;border-radius:10px}
 
 .hero{
-  background:linear-gradient(160deg,#2a1508 0%,#1e120a 100%);
+  background:linear-gradient(160deg,#14143a 0%,#0d162e 100%);
   border-radius:14px;padding:18px 14px 14px;
-  border:1px solid rgba(235,104,52,.18);text-align:center;
+  border:1px solid rgba(80,120,255,.12);text-align:center;
 }
 .hero .env{
   font-size:36px;font-weight:900;letter-spacing:3px;
-  background:linear-gradient(180deg,#f5a54a,#e06800);
+  background:linear-gradient(180deg,#6b9fff,#3b6cf4);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
-.hero .desc{font-size:12px;color:#c09072;margin-top:2px}
-.hero .ratio{font-size:13px;color:#d0a880;margin-top:4px}
+.hero .desc{font-size:12px;color:#6b84b8;margin-top:2px}
+.hero .ratio{font-size:13px;color:#8899bb;margin-top:4px}
 
 .idx-row{display:flex;gap:6px}
 .idx{flex:1;background:rgba(255,255,255,.035);border-radius:10px;padding:10px 6px;text-align:center}
@@ -87,93 +87,61 @@ body{
   <!-- 第一屏 -->
   <div class="top-row">
     <span class="brand">A 股 复 盘</span>
-    <span class="date-tag">2026.08.17 周一</span>
+    <span class="date-tag">2026.08.19 周三</span>
   </div>
 
   <!-- Hero -->
   <div class="hero">
-    <div class="env">分化偏涨</div>
-    <div class="desc">涨跌比 4.07 · 涨 4335 跌 1064</div>
-    <div class="ratio">放量11.4% · 涨停110家 · 科技链全面爆发</div>
+    <div class="env">冰 点</div>
+    <div class="desc">涨跌比 0.09 · 涨 449 跌 5069</div>
+    <div class="ratio">放量4.6% · 涨停38家 · 费半-4.98%共振出清</div>
   </div>
 
   <!-- 三大指数 -->
   <div class="idx-row">
-    <div class="idx"><div class="n">上证</div><div class="v">3983</div><div class="c c-r">+1.41%</div></div>
-    <div class="idx"><div class="n">深证</div><div class="v">14704</div><div class="c c-r">+2.44%</div></div>
-    <div class="idx"><div class="n">创业板</div><div class="v">3740</div><div class="c c-r">+3.14%</div></div>
+    <div class="idx"><div class="n">上证</div><div class="v">3894</div><div class="c c-g">-2.40%</div></div>
+    <div class="idx"><div class="n">深证</div><div class="v">13890</div><div class="c c-g">-5.01%</div></div>
+    <div class="idx"><div class="n">创业板</div><div class="v">3473</div><div class="c c-g">-6.26%</div></div>
   </div>
 
   <!-- 核心数据 6 格 -->
   <div class="grid6">
-    <div class="cell"><div class="bv c-y">4.07</div><div class="bl">涨跌比</div></div>
-    <div class="cell"><div class="bv c-r">110</div><div class="bl">涨停</div><div class="be c-g">跌停 1</div></div>
-    <div class="cell"><div class="bv">2.40</div><div class="bl">万亿</div><div class="be c-r">放量11.4%</div></div>
-    <div class="cell"><div class="bv c-y">10.2%</div><div class="bl">炸板率</div></div>
-    <div class="cell"><div class="bv">23.8%</div><div class="bl">晋级率</div></div>
-    <div class="cell"><div class="bv c-g">-18.6亿</div><div class="bl">融资净偿还</div></div>
+    <div class="cell"><div class="bv c-y">0.09</div><div class="bl">涨跌比</div></div>
+    <div class="cell"><div class="bv c-r">38</div><div class="bl">涨停</div><div class="be c-g">跌停 130</div></div>
+    <div class="cell"><div class="bv">2.53</div><div class="bl">万亿</div><div class="be c-g">放量 4.6%</div></div>
+    <div class="cell"><div class="bv c-y">25.0%</div><div class="bl">炸板率</div></div>
+    <div class="cell"><div class="bv">8.9%</div><div class="bl">晋级率</div><div class="be">冰点</div></div>
+    <div class="cell"><div class="bv c-r">+51.97亿</div><div class="bl">融资净买入</div></div>
   </div>
 
   <!-- 两融 -->
   <div class="margin-strip">
-    <div class="mg"><div class="mv">2.65 万亿</div><div class="ml">融资余额 · 首现净偿还</div></div>
-    <div class="mg"><div class="mv">282.6%</div><div class="ml">担保比例 · 高位</div></div>
-    <div class="mg"><div class="mv">9.36%</div><div class="ml">两融占比</div></div>
+    <div class="mg"><div class="mv">2.67 万亿</div><div class="ml">融资余额 · 连续净买入</div></div>
+    <div class="mg"><div class="mv">286.8%</div><div class="ml">担保比例 · 高位</div></div>
+    <div class="mg"><div class="mv">9.53%</div><div class="ml">两融占比</div></div>
   </div>
 
   <!-- 跌停结构 -->
   <div class="sec">
     <div class="sh"><span class="si">📉</span><span class="st">跌停结构</span></div>
-    <div class="sb">跌停 <span style="color:#22c55e;font-weight:700">仅 1 家</span>：北京文化（影视院线）<br>与今日主线（半导体/CPO/PCB）<span style="color:#22c55e;font-weight:700">零重叠</span>→<span style="color:#fca5a5;font-weight:700">全面修复日</span>，非高低切也非主线崩塌</div>
+    <div class="sb">跌停 <span style="color:#22c55e;font-weight:700">130 家</span>：汽车零部16 · 通信10 · 元件9 · 通用设备9 · 半导体4<br>与前期科技主线<span style="color:#ef4444;font-weight:700">高度重叠</span> → <span style="color:#fca5a5;font-weight:700">主线崩塌</span>，非高低切换（外盘费半-4.98%共振）</div>
   </div>
 
   <!-- ═══ 第二屏 ═══ -->
 
-  <!-- 主线 半导体 -->
+  <!-- 主线 农业 -->
   <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 半导体/存储/先进封装</span></div>
+    <div class="sh"><span class="si">🔴</span><span class="st">主线 · 农业/粮食（5家 · 3板最高板）</span></div>
     <div class="sb">
-      <span style="color:#fca5a5;font-weight:700">通富微电涨停(1050亿封测)+长鑫科技+12%(4万亿创新高)</span><br>
-      催化：<span style="color:#fca5a5">SK海力士384亿美元建晶圆厂</span><br>
-      ＋ 存储短缺两年 ＋ 铠侠+15%<br>
-      <span style="color:#fca5a5;font-weight:700">真立木（长鑫科技机构龙+通富微电游资中军）</span>
+      <span style="color:#fca5a5;font-weight:700">金健米业/京粮控股/红四方 3连板</span>（全市场最高板）<br>
+      催化：<span style="color:#fca5a5">摩根大通警告下一轮全球粮食危机或明年爆发</span><br>
+      ＋ 霍尔木兹中断 + 超强厄尔尼诺 → 食品通胀<br>
+      <span style="color:#fca5a5;font-weight:700">疑似立木（防御避险，板块24→5家缩水80%）</span>
     </div>
     <div class="pills">
-      <span class="pill r">通富微电·首板</span><span class="pill r">有研新材·首板</span>
-      <span class="pill r">长鑫科技·+12%</span><span class="pill r">中微半导·+17%</span>
-      <span class="pill">普冉股份·+11%</span><span class="pill">长电科技·+9.7%</span>
-    </div>
-  </div>
-
-  <!-- 主线 CPO -->
-  <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · CPO/光模块/光互连</span></div>
-    <div class="sb">
-      <span style="color:#fca5a5;font-weight:700">中石科技2板20cm+太辰光20cm+中瓷电子2板</span><br>
-      催化：<span style="color:#fca5a5">英伟达CPO量产+硅光交换机量产</span><br>
-      ＋ 中际旭创/新易盛/天孚通信+6%带队<br>
-      <span style="color:#fca5a5;font-weight:700">真立木（中际旭创机构龙+中石科技游资龙）</span>
-    </div>
-    <div class="pills">
-      <span class="pill r">中石科技·2板20cm</span><span class="pill r">太辰光·20cm</span>
-      <span class="pill r">中瓷电子·2板</span><span class="pill r">共进股份·3板</span>
-      <span class="pill">沃格光电</span><span class="pill">合锻智能</span>
-    </div>
-  </div>
-
-  <!-- 主线 PCB -->
-  <div class="sec sec-red">
-    <div class="sh"><span class="si">🔴</span><span class="st">主线 · PCB/覆铜板/电子布</span></div>
-    <div class="sb">
-      <span style="color:#fca5a5;font-weight:700">华正新材10天5板+宏昌电子/博敏/兴森/金禄</span><br>
-      催化：<span style="color:#fca5a5">南亚塑胶CCL涨价20-25%+电子布涨17-18%</span><br>
-      ＋ PCB龙头半年报业绩爆发（生益净利+130%）<br>
-      <span style="color:#fca5a5;font-weight:700">真立木（生益科技机构龙+华正新材情绪高标）</span>
-    </div>
-    <div class="pills">
-      <span class="pill r">华正新材·10天5板</span><span class="pill r">博敏电子</span>
-      <span class="pill r">宏昌电子</span><span class="pill">兴森科技</span>
-      <span class="pill">金禄电子·20cm</span><span class="pill">天通股份</span>
+      <span class="pill r">金健米业·3板</span><span class="pill r">京粮控股·3板</span>
+      <span class="pill r">红四方·3板</span><span class="pill">万向德农·2板</span>
+      <span class="pill">永顺泰·首板</span>
     </div>
   </div>
 
@@ -181,9 +149,9 @@ body{
   <div class="sec sec-yel">
     <div class="sh"><span class="si">🟡</span><span class="st">次线 & 散点</span></div>
     <div class="sb">
-      <span style="color:#fb923c;font-weight:700">医药回升</span>：誉衡7天5板/药明康德创新高/澳洋4板<br>
-      <span style="color:#fb923c;font-weight:700">大消费</span>：一鸣食品15天10板（白酒逆势跌·茅台-4%）<br>
-      农业（厄尔尼诺）：金健米业/农发种业 ｜ 有色：北方铜业/贵研铂业
+      <span style="color:#fb923c;font-weight:700">煤化工/焦炭 6家全首板</span>：宝泰隆/美锦/陕西黑猫/大有能源（焦炭提涨预期）<br>
+      房地产3家（南都/我爱我家/中交）· 化学制药3家 · 厨卫电器5家<br>
+      斯达半导（100元）逆势涨停 · IGBT功率半导体，冰点唯一科技亮点
     </div>
   </div>
 
@@ -191,41 +159,41 @@ body{
   <div class="sec" style="border-color:rgba(239,68,68,.12);background:rgba(239,68,68,.02)">
     <div class="sh"><span class="si">⚠️</span><span class="st">核心矛盾</span></div>
     <div class="sb">
-      周末发酵+英伟达CPO量产+SK海力士384亿建厂<br>
-      科技链<span style="color:#fca5a5;font-weight:700">放量2446亿、涨停110家、科创50+4%</span>全面爆发<br>
-      <span style="color:#fca5a5;font-weight:700">"科技趋势启动"还是"普涨后接力不足将分化"？</span><br>科技三主线高度重叠，明日增量资金能否持续是关键
+      外盘费半<span style="color:#22c55e;font-weight:700">-4.98%</span>（30年美债5.31%创19年新高+欧央行AI估值泡沫警告）<br>
+      科技主线全线跌停，跌停<span style="color:#22c55e;font-weight:700">130家</span>，农业防御独活<br>
+      <span style="color:#fca5a5;font-weight:700">恐慌性出清（一日性）还是春季终结转入秋冬（趋势性）？</span>
     </div>
   </div>
 
-  <!-- 周二观察 -->
+  <!-- 周四观察 -->
   <div class="sec sec-blu">
-    <div class="sh"><span class="si">📌</span><span class="st">周二观察</span></div>
-    <div class="obs"><div class="no">1</div><div class="ot">通富微电≥2板+半导体≥5家续板→<span style="color:#60a5fa;font-weight:700">半导体主线确立</span>；否则权重股获利兑现</div></div>
-    <div class="obs"><div class="no">2</div><div class="ot">中石科技≥3板+太辰光/中瓷续板→<span style="color:#60a5fa;font-weight:700">CPO延续</span>；否则光模块纯标的退潮</div></div>
-    <div class="obs"><div class="no">3</div><div class="ot">若今晚费半跌&gt;2%→周二<span style="color:#fca5a5;font-weight:700">存储/半导体链回避</span>（摩根士丹利"存储Q4后期"）</div></div>
-    <div class="obs"><div class="no">4</div><div class="ot">仓位≤4成（2成半导体+1成CPO+1成现金观察PCB/设备）</div></div>
+    <div class="sh"><span class="si">📌</span><span class="st">周四观察</span></div>
+    <div class="obs"><div class="no">1</div><div class="ot">金健米业/京粮控股能否<span style="color:#60a5fa;font-weight:700">≥4板</span>？断板即冰点无主线、农业防御证伪</div></div>
+    <div class="obs"><div class="no">2</div><div class="ot">若今晚费半<span style="color:#fca5a5;font-weight:700">续跌&gt;2%</span>→科技链冰点延续，空仓回避</div></div>
+    <div class="obs"><div class="no">3</div><div class="ot">半导体是否<span style="color:#60a5fa;font-weight:700">缩量止跌</span>？斯达半导逆势涨停是否带超跌反抽</div></div>
+    <div class="obs"><div class="no">4</div><div class="ot">仓位≤1成（冰点空仓等修复，农业3板不追）</div></div>
   </div>
 
   <!-- 💱 杠杆ETF -->
   <div class="sec sec-pur">
     <div class="sh"><span class="si">💱</span><span class="st">杠杆ETF份额（趋势中后期信号）</span></div>
     <div class="etf-grid">
-      <div class="etf-cell"><div class="ec-t">SOXL</div><div class="ec-s">167.30M</div><div class="ec-d c-g">-1.99%</div></div>
-      <div class="etf-cell"><div class="ec-t">RAM</div><div class="ec-s">48.77M</div><div class="ec-d" style="color:#888">持平</div></div>
-      <div class="etf-cell"><div class="ec-t">MUU</div><div class="ec-s">135.40M</div><div class="ec-d c-g">-1.37%</div></div>
-      <div class="etf-cell"><div class="ec-t">07709</div><div class="ec-s">1081.5M</div><div class="ec-d c-g">-0.96%</div></div>
-      <div class="etf-cell"><div class="ec-t">SKUU</div><div class="ec-s">8.58M</div><div class="ec-d c-g">-12.36%</div></div>
+      <div class="etf-cell"><div class="ec-t">SOXL</div><div class="ec-s">164.95M</div><div class="ec-d c-g">-1.40%</div></div>
+      <div class="etf-cell"><div class="ec-t">RAM</div><div class="ec-s">48.03M</div><div class="ec-d c-g">-1.52%</div></div>
+      <div class="etf-cell"><div class="ec-t">MUU</div><div class="ec-s">131.00M</div><div class="ec-d c-g">-3.25%</div></div>
+      <div class="etf-cell"><div class="ec-t">07709</div><div class="ec-s">1032M</div><div class="ec-d c-g">-4.58%</div></div>
+      <div class="etf-cell"><div class="ec-t">SKUU</div><div class="ec-s">7.49M</div><div class="ec-d c-g">-12.70%</div></div>
     </div>
-    <div class="sb" style="margin-top:8px">五标的<span style="color:#c084fc;font-weight:700">均无背离</span>（无价格新高+份额转跌组合）｜SK海力士2x杠杆首现净赎回，但价格未创历史新高，属获利了结｜数据截至 08-14</div>
+    <div class="sb" style="margin-top:8px">五标的<span style="color:#c084fc;font-weight:700">均无背离</span>（价格同步暴跌，非"新高+份额转跌"）｜份额全线回落属<span style="color:#c084fc;font-weight:700">恐慌赎回</span>｜数据截至 08-18</div>
   </div>
 
   <!-- 情绪序列 mini -->
   <div class="spark">
     <div class="sp-t">涨跌比 · 近20交易日</div>
     <svg width="100%" height="80" viewBox="0 0 360 80" preserveAspectRatio="none">
-      <polyline points="5.0,65.0 23.7,68.6 42.4,57.0 61.1,69.6 79.7,3.3 98.4,66.5 117.1,57.2 135.8,68.2 154.5,46.4 173.2,60.0 191.8,62.4 210.5,61.6 229.2,66.0 247.9,65.9 266.6,59.3 285.3,68.4 303.9,58.1 322.6,69.0 341.3,67.0 360.0,55.1" fill="none" stroke="#c084fc" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline points="5.0,62.4 23.7,74.6 42.4,10.0 61.1,71.6 79.7,62.5 98.4,73.2 117.1,51.9 135.8,65.2 154.5,67.6 173.2,66.8 191.8,71.1 210.5,71.0 229.2,64.5 247.9,73.5 266.6,63.4 285.3,74.1 303.9,72.1 322.6,60.4 341.3,72.7 360.0,74.7" fill="none" stroke="#c084fc" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
       <line x1="0" y1="75" x2="360" y2="75" stroke="#333" stroke-width="1"/>
-      <text x="0" y="10" font-size="9" fill="#6677aa">18.2</text>
+      <text x="0" y="10" font-size="9" fill="#6677aa">18.16</text>
       <text x="0" y="75" font-size="9" fill="#6677aa">0</text>
     </svg>
   </div>
